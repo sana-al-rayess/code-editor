@@ -1,6 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Navbar from '../../components/Navbar/Navbar';
+import Button from '../../components/Button/button';
 import './search.css';
 
 
@@ -13,7 +14,6 @@ const SearchPage = () => {
     setInputValue(event.target.value);
   }
 
-  // const [weblink,setWebLink] = useState('');
   const handleWeblink = (event) => {
     setIsVisible(true);
 
@@ -46,9 +46,9 @@ const SearchPage = () => {
     </div>
     <div className="result">
       <p id="search_result">Help us in building our community</p>
-      <button id="invite" onClick={handleWeblink}>Invite a Friend</button>
+      <Button id="invite" onClick={handleWeblink}>Invite a Friend</Button>
       <div>
-        {isVisible && (<div>Linked Coppied Successfully</div>)}
+        {isVisible && (<div className="alert_mess">Linked Coppied Successfully</div>)}
       </div>
     </div>
   </div>

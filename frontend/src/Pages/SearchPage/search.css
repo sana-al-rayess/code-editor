@@ -10,50 +10,7 @@ body{
   color: white;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  text-align: center;
-  align-items: center;
-}
 
-.logo{
-font-size: 2.5rem;
-}
-
-span{
-  color: #0DD99F;
-}
-
-.links {
-  display: flex;
-  gap: 1.2rem;
-  text-align: center;
-  align-items: center;
-}
-
-.linking {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-}
-
-#logout{
-  background-color: #0DD99F;
-  color: #290840;
-  width: 7rem;
-  height: 2rem;
-  border-radius: 1rem;
-  border: none;
-  font-size: 1rem;
-}
-
-#logout:active{
-  transform: translateY(4px);
-}
 
 #u_search{
   text-align: center;
@@ -93,4 +50,9 @@ span{
 
 #invite:active{
   transform: translateY(4px);
+}
+
+.alert_mess{
+  background-color:#0DD99F ;
+  color: #290840;
 }
