@@ -37,12 +37,16 @@ span {
   align-items: center;
 }
 
+
 .linking {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
 }
-
+.linking:hover{
+  color: #0DD99F;
+  transform: scale(1.1);
+}
 
 #logout {
   background-color: #0DD99F;
