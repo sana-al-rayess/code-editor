@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+body{
+  background-color: #290840;
+}
+
 .content {
   font-family: 'Audiowide';
   background-color: #290840;
@@ -44,6 +48,7 @@ span{
   height: 2rem;
   border-radius: 1rem;
   border: none;
+  font-size: 1rem;
 }
 
 #logout:active{
@@ -52,12 +57,40 @@ span{
 
 #u_search{
   text-align: center;
-  width: 20%;
+  width: 22%;
   border-radius: 2rem;
-  height: 1.5rem;
+  height: 2rem;
 }
 
 .search{
   align-items: center;
   text-align: center;
+  margin-top: 1.5rem;
+}
+
+.result{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+#search_result{
+  font-size: 2rem;
+}
+
+#invite{
+  background-color: #0DD99F;
+  color: #290840;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+#invite:active{
+  transform: translateY(4px);
 }
