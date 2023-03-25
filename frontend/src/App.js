@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage';
 import RegistrationPage from './Pages/RegistrationPage';
 import LoginPage from './Pages/LoginPage';
 import SearchPage from './Pages/SearchPage';
+import CodeEditor from './Pages/CodeEditor';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/reg" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/editor" element={<CodeEditor />} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
     </BrowserRouter>

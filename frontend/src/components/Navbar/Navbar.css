@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Audiowide';
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+ 
+}
+
+.linking {
+  text-decoration: none;
+  
+}
