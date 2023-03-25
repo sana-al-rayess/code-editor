@@ -12,9 +12,9 @@ const benefits = () => {
             <p className="slogan-txt">What are the benefits of Pythonic?</p>
            
                 <div class="icon-box flex">
-                    <div><img src={Image2} alt="icon" />Chat</div>
-                    <div><img src={Image3} alt="icon" />Save</div>
-                    <div><img src={Image4} alt="icon" />Collab</div>
+                    <div className="box"><img src={Image2} alt="icon" />Chat</div>
+                    <div className="box"><img src={Image3} alt="icon" />Save</div>
+                    <div className="box"><img src={Image4} alt="icon" />Collab</div>
                 </div>             
 
             </div>
