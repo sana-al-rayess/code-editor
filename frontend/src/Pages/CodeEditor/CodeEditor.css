@@ -103,3 +103,11 @@
   resize: none;
   overflow-y: scroll;
 }
+
+.input-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+ 
+}
