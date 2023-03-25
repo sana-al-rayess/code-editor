@@ -1,0 +1,12 @@
+#u_search {
+  text-align: center;
+  width: 22%;
+  border-radius: 2rem;
+  height: 2rem;
+}
+
+.search {
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5rem;
+}
