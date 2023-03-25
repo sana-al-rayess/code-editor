@@ -74,7 +74,9 @@ const CodeEditor = () => {
                         <button className='run' >
                         Run
                         </button>
-                     
+                        <button className='save' >
+                       Save
+                        </button>
                      
                     </div>
                 </div>
