@@ -6,6 +6,7 @@ import TextPhoto1 from '../../components/TextPhoto1';
 import Benefits from '../../components/Benefits';
 import Footer from '../../components/Footer';
 import Feedbacks from '../../components/Feedbacks';
+import SuccessMetrics from '../../components/SuccessMetrics';
 
 import './landing.css';
 
@@ -19,6 +20,7 @@ const HomePage = () => {
       {/* <Video /> */}
       <TextPhoto1 />
       <Benefits />
+      <SuccessMetrics />
       <Feedbacks />
       <Footer />
     </div>

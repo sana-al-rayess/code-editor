@@ -7,11 +7,11 @@ import Image from '../../images/dq.png';
 const feedback = () => {
 
 return (
-    <div>
+    <div className="space">
     <div class="feedback-title">FEEDBACKS</div>
 
 
-    <div class="feedback">
+   <div class="feedback">
         <div class="feedback-box">
             <div><img class="quotations" src={Image} alt="quot"/></div>
             <div>
@@ -33,7 +33,7 @@ return (
                 clean and simple, which made it easy for me to focus on my code!"</p>
             </div>
         </div>
-</div>
+</div> 
 </div>
         );
 }
