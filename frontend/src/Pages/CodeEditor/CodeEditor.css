@@ -91,3 +91,15 @@
   margin-top: 385px;
 }
 
+.output-textarea {
+  width: 500px;
+  height: 154px;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow-y: scroll;
+}
