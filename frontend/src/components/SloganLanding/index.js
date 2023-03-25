@@ -20,6 +20,9 @@ const Slogan = () => {
           <div>
           <Button className="padding" onClick={handleClick} disabled={clicked}>Get Started</Button>
         </div>
+
+        
+            
       </div>
     </div>
   );
