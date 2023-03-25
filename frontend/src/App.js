@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage";
 import RegistrationPage from "./Pages/RegistrationPage";
 import LoginPage from "./Pages/LoginPage";
 import SearchPage from "./Pages/SearchPage";
-import CodeEditor from "./Pages/CodeEditor";
+import CodeEditorPage from "./Pages/CodeEditorPage";
 import MessagesPage from "./Pages/MessagesPage";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 				<Route path="/reg" element={<RegistrationPage />} />
 				<Route path="/login" element={<LoginPage />} />
 				<Route path="/search" element={<SearchPage />} />
-				<Route path="/editor" element={<CodeEditor />} />
+				<Route path="/editor" element={<CodeEditorPage />} />
 				<Route path="/messages" element={<MessagesPage />} />
 				<Route path="*" element={<div>404</div>} />
 			</Routes>
