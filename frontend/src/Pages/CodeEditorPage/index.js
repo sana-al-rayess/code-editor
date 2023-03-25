@@ -50,6 +50,14 @@ const CodeEditor = () => {
               <FontAwesomeIcon icon={faChevronRight} />
                   <span className="sidebar_file-name">External resources</span>
               </div>
+              <div className="sidebar_file">
+              <FontAwesomeIcon icon={faChevronRight} />
+                  <span className="sidebar_file-name">Outline</span>
+              </div>
+              <div className="sidebar_file">
+              <FontAwesomeIcon icon={faChevronRight} />
+                  <span className="sidebar_file-name">Timeline</span>
+              </div>
            </div>
 
 
