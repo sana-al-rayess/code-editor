@@ -6,11 +6,12 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+
   
   const handleSignUpClick = () => {
-    window.location.href = "/login"; 
+    window.location.href = "/login";
   };
-  
+
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -70,29 +71,50 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {error && <p>{error}</p>}
-      <label>
-        Name:
-        <input type="name" value={name} onChange={handleNameChange} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={handleEmailChange} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={handlePasswordChange} />
-      </label>
-      <label>
-        Confirm Password:
-        <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
-      </label>
-      <button type="submit">Register</button>
-      <a href="#" className="content-btn" id="signup-content-btn">SignUp</a>
-      <p className="dark-purple">Already have an account?</p>
-      <a href="#" className="content-btn" id="signup-content-btn" onClick={handleSignUpClick}>Sign In</a>
-    </form>
+    <div>
+      <div className="container-signup flex">
+        <div className="flex column center">
+          <a href="/" className="login-title white flex text-decoration-none" >
+            <span style={{ color: '#0DD99F' }}>PY</span>THONIC
+          </a>
+          <div id="signup-content" className="register-content round-edges">
+
+            <div id="login-content" className="login-container1 flex column">
+              <p className="login-title dark-purple">Register</p>
+              <label For="name">Username</label>
+              <input id="name" className="input round-edges" type="text" />
+              <label For="email">Email</label>
+              <input id="email" className="input round-edges" type="text" />
+              <label htmlFor="password">Password</label>
+              <input id="password" className="input round-edges" type="password" />
+              <label for="gender">Gender:</label>
+              <select class="round-edges input-border display-block" id="gender" name="gender" required>
+                <option>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select><br/>
+              <label for="age">Age:</label>
+              <input className="round-edges input-border display-block" type="number" id="age" name="age"
+                required />
+              
+              <label for="location">Location:</label>
+              <input className="round-edges input-border display-block" type="text" id="location" name="location"
+                required></input>
+            </div>
+
+            {error && <p className="error">{error}</p>}
+            <button id="signup-btn" className="round-edges btn-signup" onClick={handleSubmit}>
+              Sign Up
+            </button>
+            <div className="flex row">
+              <p className="dark-purple">Already have an account?</p>
+              <a href="#" className="content-btn" id="signup-content-btn btn" onClick={handleSignUpClick}>Sign In</a>
+
+            </div>
+          </div>
+        </div>
+      </div></div>
   );
 };
+
 export default RegistrationForm;

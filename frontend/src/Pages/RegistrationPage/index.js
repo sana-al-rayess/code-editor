@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LoginForm from "../../components/LoginForm";
 import RegistrationForm from "../../components/RegisterForm";
-import './styles.css';
+import './register.css';
 
 const RegistrationPage = () => {
   return (
