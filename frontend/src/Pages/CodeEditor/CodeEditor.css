@@ -47,7 +47,7 @@ margin-left: 18px;
 
 .input-container {
   height: 328px;
-  width: 520px;
+  width: 530px;
   display: flex;
   flex-direction: column;
 }
@@ -57,12 +57,12 @@ margin-left: 18px;
   justify-content: space-between;
   border: 1px solid #373737;
   background-color: #D9D9D9;
- padding: 16px;
- width: 488px;
+ padding: 15px;
+ width: 530px;
 }
 .input-textarea {
   height: 306px;
-  width: 500px;
+  width: 530px;
   border: none;
   background-color: #D9D9D9;
   color: #50044c;
@@ -74,7 +74,7 @@ margin-left: 18px;
 }
 .output-container {
   flex: 1;
-  width: 502px;
+  width: 530px;
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ margin-left: 18px;
 
 }
 .output-textarea {
-  width: 500px;
+  width: 480px;
   height: 154px;
   background-color: #D9D9D9;
   color: #5004;
