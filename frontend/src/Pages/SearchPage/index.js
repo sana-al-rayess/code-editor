@@ -20,8 +20,9 @@ const SearchPage = () => {
     event.preventDefault();
     const url = "http://localhost:3000/"
     navigator.clipboard.writeText(url);
-
   }
+
+  //message
 
 
   return <div className="content">
