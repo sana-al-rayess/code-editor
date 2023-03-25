@@ -53,7 +53,11 @@ const SearchPage = () => {
     <div className="result">
       <p id="search_result">Help us in building our community</p>
       <button id="invite" onClick={handleWeblink}>Invite a Friend</button>
-
+      <div>
+        {isVisible && (
+          <div>Linked Coppied Successfully</div>
+        )}
+      </div>
     </div>
   </div>
 }
