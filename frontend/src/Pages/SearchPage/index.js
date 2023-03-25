@@ -1,7 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Navbar from '../../components/Navbar/Navbar';
-import SloganLanding from '../../components/SloganLanding';
 import './search.css';
 
 
