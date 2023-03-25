@@ -52,7 +52,17 @@ const CodeEditor = () => {
            </div>
 
            <div className="in-out-container">
-            
+            <div className='input-container'>
+             <img src=''></img> <span><h3>App.py</h3></span>
+            <textarea className='input-textarea'></textarea>
+            </div>
+            <div className='output-container'>
+            <textarea
+                className='output-textarea'
+                placeholder='Output'>
+
+                </textarea>
+            </div>
            </div>
       </div>
     </div>

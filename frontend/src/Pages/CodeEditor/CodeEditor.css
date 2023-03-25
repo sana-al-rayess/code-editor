@@ -1,12 +1,18 @@
+.code-editor-container {
+  display: flex;
+}
+
+
 .sidebar {
     width: 250px;
-    height: 80%;
+    height: 500px;
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
     position: fixed;
     top:80px;
-    left: 20px;
+    left: 18px;
     overflow-y: auto;
+    border: 1px solid #373737;
   }
   
   .sidebar_header {
@@ -41,3 +47,13 @@
  .sidebar_list{
   margin-left: 18px;
  }
+
+ .in-out-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 270px; 
+}
+
+
+
+
