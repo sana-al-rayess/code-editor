@@ -1,12 +1,13 @@
 import Users from "../../components/Users";
 import Messages from "../../components/Messages";
 import "./messagesPage.css";
+import Navbar from "../../components/Navbar/Navbar";
 
 const MessagesPage = () => {
 	return (
 		<div className="main">
 			<div className="navbar">
-				<p>NavBar</p>
+				<Navbar />
 			</div>
 			<div className="page">
 				<Users />
