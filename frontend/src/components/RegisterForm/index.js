@@ -6,7 +6,11 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-
+  
+  const handleSignUpClick = () => {
+    window.location.href = "/login"; 
+  };
+  
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -24,14 +28,14 @@ const RegistrationForm = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    
-    
+
+
     if (name.trim() === "") {
       setError("Name cannot be empty");
       return;
     }
-    
-    
+
+
     if (email.trim() === "") {
       setError("Email cannot be empty");
       return;
@@ -39,8 +43,8 @@ const RegistrationForm = () => {
       setError("Invalid email address");
       return;
     }
-    
-    
+
+
     if (password === "") {
       setError("Password cannot be empty");
       return;
@@ -48,16 +52,16 @@ const RegistrationForm = () => {
       setError("Password must be at least 6 characters long");
       return;
     }
-    
-    
+
+
     if (confirmPassword !== password) {
       setError("Passwords do not match");
       return;
     }
-    
-    
+
+
     console.log(`Name: ${name} Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}`);
-    
+
     setName("");
     setEmail("");
     setPassword("");
@@ -85,6 +89,9 @@ const RegistrationForm = () => {
         <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
       </label>
       <button type="submit">Register</button>
+      <a href="#" className="content-btn" id="signup-content-btn">SignUp</a>
+      <p className="dark-purple">Already have an account?</p>
+      <a href="#" className="content-btn" id="signup-content-btn" onClick={handleSignUpClick}>Sign In</a>
     </form>
   );
 };

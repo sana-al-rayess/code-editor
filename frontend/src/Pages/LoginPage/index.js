@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import LoginForm from "../../components/LoginForm";
-import RegistrationForm from "../../components/RegisterForm";
+
 import './styles.css';
 
-const RegistrationPage = () => {
+const LoginPage = () => {
   return (
     <div>
-      <RegistrationForm />
+      <LoginForm />
     </div>
   );
 };
 
-export default RegistrationPage;
+export default LoginPage;
 
 
