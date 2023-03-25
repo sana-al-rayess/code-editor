@@ -55,5 +55,12 @@
 }
 
 
-
+.input-container {
+  height: 328px;
+  width: 518px;
+  position: absolute;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+}
 
