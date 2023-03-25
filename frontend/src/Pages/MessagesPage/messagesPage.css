@@ -17,3 +17,14 @@
 	justify-content: space-around;
 	align-items: center;
 }
+
+@media screen and (max-width: 1000px) {
+	.page {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.page > * {
+		margin: 20px 0;
+	}
+}
