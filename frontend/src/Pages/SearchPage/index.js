@@ -25,11 +25,13 @@ const SearchPage = () => {
 
   //message
   useEffect(() => {
+
     if (isVisible) {
       timeoutId = setTimeout(() => {
         setIsVisible(false);
       }, 1000)
     }
+
     return () => {
       clearTimeout(timeoutId);
     };
