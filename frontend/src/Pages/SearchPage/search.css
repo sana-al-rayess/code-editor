@@ -54,3 +54,12 @@ body{
   color:#0DD99F ;
 }
 
+@media screen and (max-width: 768px) {
+  p#search_result {
+    font-size: 1.5rem;
+  }
+
+  div.result{
+    margin-top: 14rem;
+  }
+}
