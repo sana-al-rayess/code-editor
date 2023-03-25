@@ -19,12 +19,13 @@
     padding-right: 1.5rem;
     text-align: center;
     align-items: center;
-    background-color: #290840;
+    
 }
 
 .content {
     font-family: 'Audiowide';
-    background-color: #290840;
+    /* background-color: #290840; */
+    background: linear-gradient(to bottom, #36184B, #553D65, #290840);
     color: white;
 }
 
@@ -39,16 +40,23 @@ span {
     color: #0DD99F;
 }
 
+.button{
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+
+
+/* Landing */
 .slogan {
     width: 100%;
     height: auto;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #36184B, #553D65, #5B466A);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    
+
 }
 
 .flex {
@@ -62,6 +70,7 @@ span {
     font-size: 2.2rem;
     line-height: 64px;
     text-align: center;
+    padding-top: 50px;
 }
 .slogan-txt2 {
     /* font-size: 5vh; */
@@ -70,6 +79,7 @@ span {
     font-size: 1rem;
     line-height: 32px;
     text-align: center;
+    
 
 }
 
