@@ -11,11 +11,11 @@ const CodeEditor = () => {
           <div className="sidebar">
               <div className="sidebar_header">
                 <FontAwesomeIcon icon={faFolder} />
-                  <h3 className="sidebar_header-title">Files</h3>
+                  <h3 className="sidebar__header-title">Files</h3>
               </div>
               <div className="sidebar_file">
               <FontAwesomeIcon icon={faFolderOpen} />
-                  <span className="sidebar_file-name">public</span>
+                  <span className="sidebar__file-name">public</span>
               </div>
               <div className="sidebar_file">
               <FontAwesomeIcon icon={faFolderOpen} />
@@ -36,7 +36,19 @@ const CodeEditor = () => {
               </div>
            
               </div>
-             
+              <div className="sidebar_file">
+              <FontAwesomeIcon icon={faFileLines} />
+                  <span className="sidebar_file-name">Package.json</span>
+              </div>
+           
+              <div className="sidebar_file">
+              <FontAwesomeIcon icon={faChevronRight} />
+                  <span className="sidebar_file-name"> Dependencies</span>
+              </div>
+              <div className="sidebar_file">
+              <FontAwesomeIcon icon={faChevronRight} />
+                  <span className="sidebar_file-name">External resources</span>
+              </div>
            </div>
 
            <div className="in-out-container">
