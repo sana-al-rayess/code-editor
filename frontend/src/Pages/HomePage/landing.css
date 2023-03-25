@@ -214,10 +214,22 @@ span {
     align-items: center;
     animation: animate-box 2s ease-in-out infinite alternate;
 }
-
+.success-box:hover {
+    transform: scale(1.1);
+    border:5px solid #0DD99F;
+}
 
 .content {
   text-align: center;
+}
+
+@keyframes animate-box {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
 }
 
 
