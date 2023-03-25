@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import './search.css';
-import ('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
 const SearchPage = () => {
@@ -13,7 +12,7 @@ const SearchPage = () => {
 
   return <div className="content">
     <div className="navbar">
-      <div className="logo">Pythonic</div>
+      <div className="logo"><span>Py</span>thonic</div>
       <div className="links">
         <Link to="/" className="linking">Home</Link>
         <Link to="/reg" className="linking">Code Editor</Link>
