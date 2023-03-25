@@ -1,14 +1,28 @@
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import './search.css';
 
 
 const SearchPage = () => {
 
   const [inputValue, setInputValue] = useState('');
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
+  const [isVisible, setIsVisible] = useState(false);
+  let timeoutId;
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   }
+
+  // const [weblink,setWebLink] = useState('');
+  const handleWeblink = (event) => {
+    setIsVisible(true);
+
+    //copy link
+    event.preventDefault();
+    const url = "http://localhost:3000/"
+    navigator.clipboard.writeText(url);
+
+  }
+
 
   return <div className="content">
     <div className="navbar">
@@ -22,13 +36,13 @@ const SearchPage = () => {
       </div>
     </div>
     <div className="search">
-      <input type='text' id="u_search" value={inputValue} onChange={handleInputChange} placeholder="Search For..."></input>
+      <input type='text' id="u_search" value={inputValue} onChange={handleInputChange} placeholder="Search For Users"></input>
     </div>
     <div className="result">
       <p id="search_result">Help us in building our community</p>
-      <button id="invite">Invite a Friend</button>
+      <button id="invite" onClick={handleWeblink}>Invite a Friend</button>
+
     </div>
   </div>
 }
-
 export default SearchPage; 
