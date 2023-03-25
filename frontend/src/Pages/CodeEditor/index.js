@@ -12,11 +12,11 @@ const CodeEditor = () => {
       <div className="sidebar">
               <div className="sidebar_header">
                 <FontAwesomeIcon icon={faFolder} />
-                  <h3 className="sidebar__header-title">Files</h3>
+                  <h3 className="sidebar_file-name">Files</h3>
               </div>
               <div className="sidebar_file">
               <FontAwesomeIcon icon={faFolderOpen} />
-                  <span className="sidebar__file-name">public</span>
+                  <span className="sidebar_file-name">public</span>
               </div>
               <div className="sidebar_file">
               <FontAwesomeIcon icon={faFolderOpen} />
