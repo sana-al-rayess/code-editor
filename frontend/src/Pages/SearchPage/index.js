@@ -1,5 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import Navbar from '../../components/Navbar/Navbar';
+import SloganLanding from '../../components/SloganLanding';
 import './search.css';
 
 
@@ -37,16 +39,7 @@ const SearchPage = () => {
 
 
   return <div className="content">
-    <div className="navbar">
-      <div className="logo"><span>Py</span>thonic</div>
-      <div className="links">
-        <Link to="/" className="linking">Home</Link>
-        <Link to="/reg" className="linking">Code Editor</Link>
-        <Link to="/aaa" className="linking">Codes</Link>
-        <Link to="/aaa" className="linking">Chat</Link>
-        <button id="logout" className="linking">Logout</button>
-      </div>
-    </div>
+    <Navbar className="navbar" />
     <div className="search">
       <input type='text' id="u_search" value={inputValue} onChange={handleInputChange} placeholder="Search For Users"></input>
     </div>
