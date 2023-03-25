@@ -1,11 +1,15 @@
-
+import React, { useState } from "react";
+import Navbar from '../../components/Navbar/Navbar';
+import SloganLanding from '../../components/SloganLanding';
+import './landing.css';
 
 const HomePage = () => {
   
 
   return (
-    <div>
-      <h1>PYTHONIC</h1>
+    <div className="content">
+      <Navbar className="navbar" />
+      <SloganLanding />
     </div>
   );
 }
