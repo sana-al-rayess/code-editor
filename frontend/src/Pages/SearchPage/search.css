@@ -1,0 +1,19 @@
+
+
+.content {
+  font-family: 'Audiowide';
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.linking {
+  text-decoration: none;
+}
