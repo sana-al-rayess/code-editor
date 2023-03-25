@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import './Navbar.css';
 import Button from '../../components/Button/button';
+import Search from '../../images/whitesearch.png';
+
 const Navbar = () => {
   return (
  <div className="navbar">
@@ -10,7 +12,7 @@ const Navbar = () => {
       <Link to="/editor" className="linking">Code Editor</Link>
       <Link to="/aaa" className="linking">Codes</Link>
       <Link to="/aaa" className="linking">Chat</Link>
-      {/* <img src="../images/whitesearch.png" alt="search icon"/> */}
+      <img className="search-icon" src={Search} alt="search icon"/>
       <Button id="logout" className="linking">Logout</Button>
     </div>
   </div>

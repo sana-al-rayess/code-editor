@@ -4,6 +4,7 @@ import SloganLanding from '../../components/SloganLanding';
 import Video from '../../components/Video';
 import TextPhoto1 from '../../components/TextPhoto1';
 import Benefits from '../../components/Benefits';
+import Footer from '../../components/Footer';
 
 import './landing.css';
 
@@ -17,6 +18,7 @@ const HomePage = () => {
       {/* <Video /> */}
       <TextPhoto1 />
       <Benefits />
+      <Footer />
     </div>
   );
 }
