@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button';
+
 import './search.css';
 
 
@@ -14,10 +15,11 @@ const SearchPage = () => {
     setInputValue(event.target.value);
   }
 
+
+  //copy link
   const handleWeblink = (event) => {
     setIsVisible(true);
 
-    //copy link
     event.preventDefault();
     const url = "http://localhost:3000/"
     navigator.clipboard.writeText(url);
