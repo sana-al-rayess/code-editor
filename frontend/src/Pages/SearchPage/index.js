@@ -37,8 +37,6 @@ const SearchPage = () => {
     };
   }, [isVisible]);
 
-
-
   return <div className="content">
     <Navbar className="navbar" />
     <div className="search">

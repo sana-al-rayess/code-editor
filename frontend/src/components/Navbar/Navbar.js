@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import './Navbar.css'
+import './Navbar.css';
+import Button from '../../components/Button/button';
 const Navbar = () => {
   return (
  <div className="navbar">
@@ -10,7 +11,7 @@ const Navbar = () => {
       <Link to="/aaa" className="linking">Codes</Link>
       <Link to="/aaa" className="linking">Chat</Link>
       {/* <img src="../images/whitesearch.png" alt="search icon"/> */}
-      <button id="logout" className="linking">Logout</button>
+      <Button id="logout" className="linking">Logout</Button>
     </div>
   </div>
   )
