@@ -18,6 +18,17 @@ const Footer = () => {
         <p>Blog</p>
         <p>Resources</p>
       </div>
+      <div className="connect">
+        <div className="icons">
+          <img className="sm_icons" src={MyFace} alt="facebook.png" />
+          <img className="sm_icons" src={MyIns} alt="instagram.png"></img>
+          <img className="sm_icons" src={Mytwit} alt="twitter.png"></img>
+          <img className="sm_icons" src={Mygit} alt="github.png"></img>
+        </div>
+        <div>
+          <p className="slogan">&#9400;Photo,Inc 2023, We love our Users</p>
+        </div>
+      </div>
     </div>
   );
 }
