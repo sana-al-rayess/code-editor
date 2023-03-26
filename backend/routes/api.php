@@ -17,7 +17,7 @@ use App\Http\Controllers\ActionController;
 */
 
 Route::get('/users', [ActionController::class, 'getUsers']);
-
+Route::post('/save-code', [ActionController::class, 'saveCode']);
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');

@@ -7,6 +7,7 @@ use App\Models\Message;
 use App\Models\SavedCode;
 use App\Models\User;
 
+
 class ActionController extends Controller
 {
     public function getUsers()
@@ -40,6 +41,29 @@ class ActionController extends Controller
             "response" => $message,'message' => 'Success'
         ]);
     }
+    public function saveCode(Request $request)
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'text' => 'required|string',
+        'description' => 'nullable|string',
+    ]);
+
+    $user = Auth::user();
+
+    $savedCode = SavedCode::create([
+        'user_id' => $user->id,
+        'title' => $request->input('title'),
+        'text' => $request->input('text'),
+        'description' => $request->input('description'),
+    ]);
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Code saved successfully',
+        'saved_code' => $savedCode,
+    ]);
+}
 
 
 }
