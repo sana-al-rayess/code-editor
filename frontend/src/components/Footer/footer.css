@@ -4,10 +4,11 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  border-bottom: 1px solid #290840;
+  border-bottom: 1px solid #5B466A;
   margin-top: 3rem;
   padding-bottom: 2rem;
 }
+
 
 #center_logo{
   font-size: 2rem;
@@ -28,10 +29,20 @@
   margin-left: 2.8rem;
 }
 
+
 .slogan{
   text-align: center;
   font-size: 0.5rem;
   margin-top: 1rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
+}
+.hover{
+  display: flex;
+
+}
+.hover:hover{
+  color: #0DD99F;
+  transform: scale(1.1);
+  cursor: pointer;
 }

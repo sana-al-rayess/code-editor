@@ -1,7 +1,7 @@
-import MyFace from '../../icons/facebook.png';
-import MyIns from '../../icons/instagram.png';
-import Mygit from '../../icons/github.png';
-import Mytwit from '../../icons/twitter.png';
+import MyFace from '../../icons/fb.png';
+import MyIns from '../../icons/insta.png';
+import Mygit from '../../icons/git.png';
+import Mytwit from '../../icons/twit.png';
 import './footer.css';
 
 
@@ -10,13 +10,13 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="info">
-        <p>Mobile app</p>
-        <p>Community</p>
-        <p>Company</p>
-        <p id="center_logo">Pythonic</p>
-        <p>Help desk</p>
-        <p>Blog</p>
-        <p>Resources</p>
+        <p className='hover'>Mobile app</p>
+        <p className='hover'>Community</p>
+        <p className='hover'>Company</p>
+        <p  id="center_logo"><span>Py</span>thonic</p>
+        <p className='hover'>Help desk</p>
+        <p className='hover'>Blog</p>
+        <p className='hover'>Resources</p>
       </div>
       <div className="connect">
         <div className="icons">
