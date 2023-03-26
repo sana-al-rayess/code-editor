@@ -8,28 +8,33 @@ import Footer from '../../components/Footer';
 import Feedbacks from '../../components/Feedbacks';
 import SuccessMetrics from '../../components/SuccessMetrics';
 import Parallax from '../../components/Parallax';
+import FlashNews from '../../components/FlashNews';
 import Image from "../../images/par1.jpg";
 import Image1 from "../../images/par1.jpg";
 
 import './landing.css';
 
 const HomePage = () => {
-  
+
 
   return (
     <div className="content">
-      <Navbar className="navbar" />
-      <SloganLanding /><br /><br />
+
+      <div className="navbar" > <Navbar /></div>
+      <div className="component" ><FlashNews /></div>
+      <div className="component" > <SloganLanding /></div>
+      <br /><br />
       {/* <Video /> */}
-      <TextPhoto1 />
-      
-      <Benefits />
-      <SuccessMetrics />
-      <Parallax backgroundImage={Image}>
+      <div className="component" > <TextPhoto1 /></div>
+      <div className="component" ><Benefits /></div>
+      <div className="component" ><Parallax backgroundImage={Image}>
         {/* <h1></h1> */}
-      </Parallax>
-      <Feedbacks />
-      <Footer />
+      </Parallax></div>
+      <div><SuccessMetrics /></div>
+      <div className="component" ><Feedbacks /></div>
+      <div className="component" ><Footer /></div>
+
+
     </div>
   );
 }

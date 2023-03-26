@@ -11,13 +11,7 @@ const Slogan = () => {
 
   return (
     <div>
-      <div className="news-container">
-        
-        <ul className="news-list">
-          <li>[Flashing News] Major software vulnerability discovered, affecting millions of devices worldwide [Flashing News] </li>
-          
-        </ul>
-      </div>
+     
       <div className="flex slogan column">
         <div>
           <p className="slogan-txt">Modern, smart<br />
