@@ -10,7 +10,7 @@
   color: rgb(0, 0, 0);
   border: 1px solid #373737;
   height: 650px;
-  width: 250px;
+  width: fit-content;
 
   
 }
