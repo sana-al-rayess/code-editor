@@ -15,8 +15,8 @@ class SavedCode extends Model
         "text"
     ];
 
-    public function saved(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
+    // public function saved(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'user_id');
+    // }
 }
