@@ -1,0 +1,32 @@
+.news-container {
+    width: 100%;
+    overflow: hidden;
+    border:3px solid #290840;
+    margin-top: 20px;
+  }
+  
+  .news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: news-animation 15s linear infinite;
+  }
+  
+  .news-list li {
+    font-size: 20px;
+    color:#0DD99F;
+    background-color:linear-gradient(to bottom, #36184B, #553D65, #290840);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  @keyframes news-animation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
