@@ -2,12 +2,32 @@ import Navbar from '../../components/Navbar/Navbar';
 import "./CodeEditor.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPython } from '@fortawesome/free-brands-svg-icons';
-import { Sidebar } from '../../components/sidbar/SidebarFile';
+import  Sidebar  from '../../components/sidebar/SidebarFile';
+
+import { useState } from 'react';
 
 const CodeEditor = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [outputValue, setOutputValue] = useState('');
+
+  const handleRunClick = () => {
+   
+    setOutputValue('Output will be shown here');
+  };
+
+  const handleSaveClick = () => {
+   
+    alert('Code saved successfully!');
+  };
+
+  const handleInputChange = (event) => {
+
+    setInputValue(event.target.value);
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar/>
       
       <div className="code-editor-container">
          
@@ -23,16 +43,16 @@ const CodeEditor = () => {
                     <span className='sidebar_file-name' >App.py</span>  
                     </div>
                     <div>
-                        <button className='run' >
+                        <button className='run' onClick={handleRunClick}>
                         Run
                         </button>
-                        <button className='save' >
+                        <button className='save' onClick={handleSaveClick}>
                        Save
                         </button>
                      
                     </div>
                 </div>
-                <textarea className='input-textarea'></textarea>
+                <textarea className='input-textarea' value={inputValue} onChange={handleInputChange}></textarea>
             </div>
             <div className='output-container'>
                 <div className='output-tabs output-tabs-horizontal'>
@@ -40,7 +60,7 @@ const CodeEditor = () => {
                 <div className='output-tab'>output</div>
                 <div className='output-tab'>problems</div>
                 </div>
-                <textarea className='output-textarea'></textarea>
+                <textarea className='output-textarea' value={outputValue} readOnly></textarea>
             </div>
            </div>
       </div>
@@ -49,3 +69,6 @@ const CodeEditor = () => {
 }
 
 export default CodeEditor;
+
+
+

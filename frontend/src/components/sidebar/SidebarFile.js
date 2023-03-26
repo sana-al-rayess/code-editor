@@ -47,4 +47,5 @@ function Sidebar() {
   );
 }
 
-export { Sidebar, SidebarHeader, SidebarFile, SidebarList };
+
+export default Sidebar
