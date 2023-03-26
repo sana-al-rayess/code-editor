@@ -18,17 +18,17 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'age',
         'gender',
-        'location'
+        'location',
     ];
 
     public function sent(): HasMany
     {
         return $this->hasMany(Message::class, 'sender_id');
     }
-    public function received(): HasMany
-    {
-        return $this->hasMany(Message::class, 'recepient_id');
-    }
+    // public function received(): HasMany
+    // {
+    //     return $this->hasMany(Message::class, 'recepient_id');
+    // }
     // public function saved(): HasMany
     // {
     //     return $this->hasMany(SavedCode::class, 'recepient_id');

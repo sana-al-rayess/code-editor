@@ -18,6 +18,7 @@ use App\Http\Controllers\ActionController;
 
 Route::get('/users', [ActionController::class, 'getUsers']);
 
+
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
     Route::post('register', 'register');
