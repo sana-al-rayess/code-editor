@@ -20,8 +20,8 @@ const HomePage = () => {
   return (
     <div className="content">
       
-      <div className="navbar" > <Navbar /></div>
-      <div className="component" ><FlashNews /></div>
+      <div className="navbar component3" > <Navbar /></div>
+      <div  ><FlashNews /></div>
       <div className="component" > <SloganLanding /></div>
       <br /><br />
       {/* <Video /> */}
