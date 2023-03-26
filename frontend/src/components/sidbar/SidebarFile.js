@@ -27,4 +27,24 @@ function SidebarList(props) {
   );
 }
 
+function Sidebar() {
+  return (
+    <div className="sidebar">
+      <SidebarHeader />
+      <SidebarFile icon={faFolder} name="public" />
+      <SidebarFile icon={faFolderOpen} name="Src" />
+      <SidebarList>
+        <SidebarFile icon={faFileCode} name="App.py" />
+        <SidebarFile icon={faFileCode} name="index.py" />
+        <SidebarFile icon={faFileCsv} name="index.css" />
+      </SidebarList>
+      <SidebarFile icon={faFileLines} name="Package.json" />
+      <SidebarFile icon={faChevronRight} name=" Dependencies" />
+      <SidebarFile icon={faChevronRight} name="External resources" />
+      <SidebarFile icon={faChevronRight} name="Outline" />
+      <SidebarFile icon={faChevronRight} name="Timeline" />
+    </div>
+  );
+}
 
+export { Sidebar, SidebarHeader, SidebarFile, SidebarList };
