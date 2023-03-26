@@ -6,6 +6,7 @@ import LoginPage from "./Pages/LoginPage";
 import SearchPage from "./Pages/SearchPage";
 import CodeEditorPage from "./Pages/CodeEditorPage";
 import MessagesPage from "./Pages/MessagesPage";
+import SavedCode from "./Pages/SavedCode";
 
 function App() {
 	return (
