@@ -7,6 +7,7 @@ use App\Models\Message;
 use App\Models\SavedCode;
 use App\Models\User;
 
+
 class ActionController extends Controller
 {
     public function getUsers()
@@ -33,11 +34,46 @@ class ActionController extends Controller
             ->where("recepient_id", $request->recepient_id)
             ->orWhere("sender_id", $request->recepient_id)
             ->where("recepient_id", $request->sender_id)
-            // ->with("sender", "recepient")
             ->get();
 
         return response()->json([
             "response" => $message,'message' => 'Success'
+        ]);
+    }
+    public function saveCode(Request $request)
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'text' => 'required|string',
+        'description' => 'nullable|string',
+    ]);
+
+    $user = Auth::user();
+
+    $savedCode = SavedCode::create([
+        'user_id' => $user->id,
+        'title' => $request->input('title'),
+        'text' => $request->input('text'),
+        'description' => $request->input('description'),
+    ]);
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Code saved successfully',
+        'saved_code' => $savedCode,
+    ]);
+}
+
+    function sendMessage(Request $request){
+        $message = Message::create([
+            "sender_id" => $request->sender_id,
+            "recepient_id" => $request->recepient_id,
+            "message" => $request->message,
+        ]);
+
+        return response()->json([
+            "message" => $message->message,
+            "status" => "sent"
         ]);
     }
 

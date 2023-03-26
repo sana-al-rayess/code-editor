@@ -106,26 +106,25 @@ const RegistrationForm = () => {
 
             <div id="login-content" className="login-container1 flex column">
               <p className="login-title dark-purple">Register</p>
-              <label For="name">Name</label>
-              <input id="name" className="input round-edges" type="text" onChange={handleNameChange} />
-              <label For="email">Email</label>
-              <input id="email" className="input round-edges" type="text" onChange={handleEmailChange} />
+              <label htmlFor="name">Username</label>
+              <input id="name" className="input round-edges" type="text" />
+              <label htmlFor="email">Email</label>
+              <input id="email" className="input round-edges" type="text" />
               <label htmlFor="password">Password</label>
-              <input id="password" className="input round-edges" type="password" onChange={handlePasswordChange} />
-              
-              <label for="age">Age:</label>
-              <input className="round-edges input-border display-block" type="number" id="age" name="age"
-                required onChange={handleAgeChange}/>
-              
-              <label for="location">Location:</label>
-              <input className="round-edges input-border display-block" type="text" id="location" name="location"
-                required onChange={handleLocationChange}></input>
-                <label for="gender">Gender:</label>
-              <select class="round-edges input-border display-block" id="gender" name="gender" onChange={handleGenderChange} required>
+              <input id="password" className="input round-edges" type="password" />
+              <label htmlFor="gender">Gender:</label>
+              <select className="round-edges input-border display-block" id="gender" name="gender" required>
                 <option>Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select><br/>
+              <label htmlFor="age">Age:</label>
+              <input className="round-edges input-border display-block" type="number" id="age" name="age"
+                required />
+              
+              <label htmlFor="location">Location:</label>
+              <input className="round-edges input-border display-block" type="text" id="location" name="location"
+                required></input>
             </div>
 
             {error && <p className="error">{error}</p>}
