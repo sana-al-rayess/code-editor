@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './success.css';
 
 const successMetrics = () => {
 
@@ -7,7 +7,11 @@ const successMetrics = () => {
         <div>
             <p className="slogan-txt">Success Metrics Reported By Customers</p>
 
+<<<<<<< HEAD
                        <div className="feedback">
+=======
+                       <div className="success-container">
+>>>>>>> 9ea8b72c6389dc9ec0cf4ac95346e430c2414123
                 <div className="success-box">
                     <div>
                     <p className="review"><span className="larger">5 min</span><br /><br />

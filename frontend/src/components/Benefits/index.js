@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image2 from "../../images/chat.png";
 import Image3 from "../../images/collab.png";
 import Image4 from "../../images/save.png";
-
+import './benefits.css';
 
 
 const benefits = () => {

@@ -1,0 +1,51 @@
+.quotations {
+    height: 100px;
+    width: auto;
+    margin: 20px;
+    padding-top: 60px;
+    padding-left: 30px;
+
+}
+
+.review {
+    color: white;
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.feedback-box {
+    background-color: #5B466A;
+    height: 500px;
+    /* width: 300px; */
+    margin: 50px;
+    flex: 1 0 300px;
+    width: 100%;
+    border: 4px solid #290840;
+
+
+}
+
+.feedback-box:hover {
+    transform: scale(1.1);
+    border:5px solid #0DD99F;
+}
+
+.feedback-title {
+    text-align: center;
+    font-weight: 500;
+    align-items: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: #0DD99F;
+    letter-spacing: 10px;
+    padding-top: 40px;
+}
