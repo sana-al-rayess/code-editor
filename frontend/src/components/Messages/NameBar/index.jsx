@@ -1,4 +1,5 @@
 import "../messages.css";
+import { useState } from "react";
 
 const NameBar = () => {
 	return (
