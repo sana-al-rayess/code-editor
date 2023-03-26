@@ -14,12 +14,12 @@ class Message extends Model
         "message",
     ];
 
-    public function sent(): HasMany
+    public function sent(): BelongsTo
     {
-        return $this->hasMany(User::class, 'sender_id');
+        return $this->belongsTo(User::class, 'sender_id');
     }
-    public function received(): HasMany
+    public function received(): BelongsTo
     {
-        return $this->hasMany(User::class, 'recepient_id');
+        return $this->belongsTo(User::class, 'recepient_id');
     }
 }
