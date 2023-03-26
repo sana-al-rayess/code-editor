@@ -18,7 +18,7 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'age',
         'gender',
-        'location'
+        'location',
     ];
 
     public function sent(): HasMany

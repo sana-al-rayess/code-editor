@@ -14,12 +14,12 @@ class Message extends Model
         "message",
     ];
 
-    public function sent(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'sender_id');
-    }
-    public function received(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'recepient_id');
-    }
+    // public function sent(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'sender_id');
+    // }
+    // public function received(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'recepient_id');
+    // }
 }
