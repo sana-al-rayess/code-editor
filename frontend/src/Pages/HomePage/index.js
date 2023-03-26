@@ -9,32 +9,30 @@ import Feedbacks from '../../components/Feedbacks';
 import SuccessMetrics from '../../components/SuccessMetrics';
 import Parallax from '../../components/Parallax';
 import FlashNews from '../../components/FlashNews';
-import Image from "../../images/par1.jpg";
+import Image from "../../images/Af5am-sora.jpg";
 import Image1 from "../../images/par1.jpg";
 
 import './landing.css';
 
 const HomePage = () => {
-
+  
 
   return (
     <div className="content">
-
+      
       <div className="navbar" > <Navbar /></div>
       <div className="component" ><FlashNews /></div>
       <div className="component" > <SloganLanding /></div>
       <br /><br />
       {/* <Video /> */}
       <div className="component" > <TextPhoto1 /></div>
-      <div className="component" ><Benefits /></div>
+      <div ><Benefits /></div>
       <div className="component" ><Parallax backgroundImage={Image}>
         {/* <h1></h1> */}
       </Parallax></div>
       <div><SuccessMetrics /></div>
       <div className="component" ><Feedbacks /></div>
       <div className="component" ><Footer /></div>
-
-
     </div>
   );
 }
