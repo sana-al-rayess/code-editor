@@ -81,23 +81,23 @@ const RegistrationForm = () => {
 
             <div id="login-content" className="login-container1 flex column">
               <p className="login-title dark-purple">Register</p>
-              <label For="name">Username</label>
+              <label htmlFor="name">Username</label>
               <input id="name" className="input round-edges" type="text" />
-              <label For="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input id="email" className="input round-edges" type="text" />
               <label htmlFor="password">Password</label>
               <input id="password" className="input round-edges" type="password" />
-              <label for="gender">Gender:</label>
-              <select class="round-edges input-border display-block" id="gender" name="gender" required>
+              <label htmlFor="gender">Gender:</label>
+              <select className="round-edges input-border display-block" id="gender" name="gender" required>
                 <option>Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select><br/>
-              <label for="age">Age:</label>
+              <label htmlFor="age">Age:</label>
               <input className="round-edges input-border display-block" type="number" id="age" name="age"
                 required />
               
-              <label for="location">Location:</label>
+              <label htmlFor="location">Location:</label>
               <input className="round-edges input-border display-block" type="text" id="location" name="location"
                 required></input>
             </div>
