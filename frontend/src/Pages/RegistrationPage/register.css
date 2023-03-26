@@ -112,7 +112,7 @@
   height: 30px;
   margin: 1vh 0 3vh 0;
 
-  border-color: #553D65;
+  border: 2px solid #553D65;
 }
 
 .login-container1>input:hover {

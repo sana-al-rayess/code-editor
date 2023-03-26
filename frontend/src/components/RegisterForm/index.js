@@ -81,7 +81,7 @@ const RegistrationForm = () => {
 
             <div id="login-content" className="login-container1 flex column">
               <p className="login-title dark-purple">Register</p>
-              <label For="name">Username</label>
+              <label For="name">Name</label>
               <input id="name" className="input round-edges" type="text" />
               <label For="email">Email</label>
               <input id="email" className="input round-edges" type="text" />
