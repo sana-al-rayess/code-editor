@@ -29,10 +29,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(Message::class, 'recepient_id');
     }
-    public function saved(): HasMany
-    {
-        return $this->hasMany(SavedCode::class, 'recepient_id');
-    }
+    // public function saved(): HasMany
+    // {
+    //     return $this->hasMany(SavedCode::class, 'recepient_id');
+    // }
 
     protected $hidden = [
         'password',
