@@ -30,7 +30,11 @@ return (
         <div className="feedback-box">
             <div><img className="quotations" src={Image}  alt="quot"/></div>
             <div>
+<<<<<<< HEAD
+                <p  className="review">"Very intuitive and easy to use. The editor was well-organized and the layout was 
+=======
                 <p className="review">"Very intuitive and easy to use. The editor was well-organized and the layout was 
+>>>>>>> 9ea8b72c6389dc9ec0cf4ac95346e430c2414123
                 clean and simple, which made it easy for me to focus on my code!"</p>
             </div>
         </div>
