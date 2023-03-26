@@ -28,7 +28,7 @@ Route::controller(AuthController::class)->group(function () {
 
 
 Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('/getmsgs', [ActionController::class, 'getMessages']);
-    Route::get('/getcodes', [ActionController::class, 'getCodes']);
+    
+    
 });
 
