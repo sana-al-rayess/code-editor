@@ -39,7 +39,20 @@ const CodeEditor = () => {
   
 
   const handleSaveClick = async () => {
-   
+    const data = {
+      title: 'python', // set your code file title here
+      text: inputValue,
+      description: 'clean code' // add description if needed
+    };
+
+    try {
+      const response = await axios.post('http://localhost:8000/api/save-code', data);
+      console.log(response.data);
+      alert('Code saved successfully!');
+    } catch (error) {
+      console.error(error);
+      alert('Error saving code. Please try again later.');
+    }
   };
 
   const handleInputChange = (event) => {
