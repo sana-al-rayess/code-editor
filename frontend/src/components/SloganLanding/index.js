@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/button";
+import './sloganlanding.css';
 
 const Slogan = () => {
   const [clicked, setClicked] = useState(false);
@@ -13,7 +14,7 @@ const Slogan = () => {
       <div className="news-container">
         
         <ul className="news-list">
-          <li>[Breaking News] Major software vulnerability discovered, affecting millions of devices worldwide. </li>
+          <li>[Flashing News] Major software vulnerability discovered, affecting millions of devices worldwide [Flashing News] </li>
           
         </ul>
       </div>
