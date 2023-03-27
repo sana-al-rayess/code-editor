@@ -103,7 +103,7 @@ const CodeEditor = () => {
               <div className='input-header'>
                 <div>
                   <FontAwesomeIcon icon={faPython} />
-                  <span className='input-header-title'>Input</span>
+                  <span className='input-header-title'>App.py</span>
                 </div>
                 <div className='input-header-buttons'>
                   <button className='run' onClick={handleRunClick}>Run</button>
@@ -114,39 +114,37 @@ const CodeEditor = () => {
               <textarea className='input-textarea' value={inputValue} onChange={handleInputChange} />
             </div>
             <div className='output-container'>
-              <div className='output-header'>
-                <div>
-               
-                  <span className='output-header-title'>Output</span>
+              <div className='output-tabs output-tabs-horizontal'>
+                <div className='output-tab'>console</div>
+                <div className='output-tab'>output</div>
+                <div className='output-tab'>problems</div>
+              </div>
+              <textarea className='output-textarea' defaultValue={outputValue}></textarea>
+            </div>
+          </div>
+        </div>
+        {showInputData && (
+          <div className='save-data-container'>
+            <div className='save-data-content'>
+              <div className='save-data-header'>
+                <h2>Save Input Data</h2>
+                <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
+              </div>
+              <div className='save-data-form'>
+                <div className='save-data-input'>
+                  <label htmlFor='title-input'>Title:</label>
+                  <input type='text' id='title-input' value={titleValue} onChange={handleTitleChange} />
                 </div>
-                
+                <div className='save-data-input'>
+                  <label htmlFor='description-input'>Description:</label>
+                  <textarea id='description-input' value={descriptionValue} onChange={handleDescriptionChange} />
+                </div>
+                <button className='save-button' onClick={handleSaveDataClick}>Save</button>
               </div>
-              <textarea className='output-textarea' value={outputValue} readOnly />
             </div>
           </div>
-        </div>
+        )}
       </div>
-      {showInputData && (
-        <div className='save-data-container'>
-          <div className='save-data-content'>
-            <div className='save-data-header'>
-              <h2>Save Input Data</h2>
-              <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
-            </div>
-            <div className='save-data-form'>
-              <div className='save-data-input'>
-                <label htmlFor='title-input'>Title:</label>
-                <input type='text' id='title-input' value={titleValue} onChange={handleTitleChange} />
-              </div>
-              <div className='save-data-input'>
-                <label htmlFor='description-input'>Description:</label>
-                <textarea id='description-input' value={descriptionValue} onChange={handleDescriptionChange} />
-              </div>
-              <button className='save-data-button' onClick={handleSaveDataClick}>Save</button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
   
