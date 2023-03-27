@@ -11,5 +11,8 @@
   margin-top: 1.5rem;
 }
 
-
-
+.cards{
+  display: flex;
+  flex-direction: row;
+  height: 11rem;
+}
