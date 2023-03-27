@@ -1,0 +1,40 @@
+.photo-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 300px;
+  }
+  
+  .photo-box {
+    width: 30% !important;
+   
+    margin-right: 20px;
+    padding: 30px;
+    
+  }
+  
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+
+  }
+  
+  .slogan-txt4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 64px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .slogan-txt1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 42px;
+    text-align: center;
+  }
+  
