@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/getmsgs', [ActionController::class, 'getMessages']);
     Route::post('/sendmsgs', [ActionController::class, 'sendMessage']);
     Route::post('/save-code', [ActionController::class, 'saveCode']);
+    Route::post('/getCodes', [ActionController::class, 'getCodes']);
     
 });
 
