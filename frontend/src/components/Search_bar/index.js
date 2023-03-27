@@ -12,6 +12,13 @@ function Search_bar() {
     const delay = 500;
     let timeoutId;
 
+    const searchUsers = async () => {
+      const url = 'http://127.0.0.1:8000/api/users';
+      const response = await axios.get(url);
+      const data = response.data;
+      const filteredUsers = data.users.filter(user => user.name.includes(inputValue));
+      setUsers(filteredUsers);
+    };
 
   }, [inputValue]);
 
