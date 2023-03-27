@@ -54,6 +54,16 @@ const CodeEditor = () => {
       alert('Error saving code. Please try again later.');
     }
   };
+  const handleDownloadClick = () => {
+    const blob = new Blob([inputValue], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'code.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -79,6 +89,9 @@ const CodeEditor = () => {
                 </button>
                 <button className='save' onClick={handleSaveClick}>
                   Save
+                </button>
+                <button className='download' onClick={handleDownloadClick}>
+                  Download
                 </button>
               </div>
             </div>
