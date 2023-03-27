@@ -7,7 +7,7 @@ function RegisterForm() {
   const handleSignUpClick = () => {
     window.location.href = "/login";
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -40,25 +40,32 @@ function RegisterForm() {
             <form onSubmit={handleSubmit}>
               <div id="login-content" className="login-container1 flex column">
                 <p className="login-title dark-purple">Register</p>
-                <label htmlFor="name">Username</label>
+                <label For="name">Name</label>
                 <input id="name" className="input round-edges" type="text" name="name" />
-                <label htmlFor="email">Email</label>
+                <label For="email">Email</label>
                 <input id="email" className="input round-edges" type="text" name="email" />
-                <label htmlFor="password">Password</label>
+                <label For="password">Password</label>
                 <input id="password" className="input round-edges" type="password" name="password" />
-                <label htmlFor="gender">Gender:</label>
-                <select className="round-edges input-border display-block" id="gender" name="gender" required>
+                {/* <label For="gender">Gender:</label>
+                <select className="round-edges input display-block" id="gender" name="gender" required>
+                  <option>Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select><br /> */}
+                <label For="age">Age:</label>
+                <input className="round-edges input display-block" type="number" id="age" name="age"
+                  required />
+
+                <label For="location">Location:</label>
+                <input className="round-edges input display-block" type="text" id="location" name="location"
+                  required></input><br />
+
+<label For="gender">Gender:</label>
+                <select className="round-edges input display-block" id="gender" name="gender" required>
                   <option>Select</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select><br />
-                <label htmlFor="age">Age:</label>
-                <input className="round-edges input-border display-block" type="number" id="age" name="age"
-                  required />
-
-                <label htmlFor="location">Location:</label>
-                <input className="round-edges input-border display-block" type="text" id="location" name="location"
-                  required></input>
               </div>
 
               <button id="signup-btn" className="round-edges btn-signup" type="submit">
