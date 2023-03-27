@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Button from "../../components/Button/button";
 import Search from "../../images/whitesearch.png";
+import React, { useState } from "react";
 
 const Navbar = () => {
+
+	const [clicked, setClicked] = useState(false);
+
+	const handleClick = () => {
+		window.location.href = "/login";
+	};
 	return (
 		<div className="navbar">
 			<div className="logo">
@@ -16,16 +23,23 @@ const Navbar = () => {
 				<Link to="/editor" className="linking">
 					Code Editor
 				</Link>
-				<Link to="/aaa" className="linking">
+				<Link to="/SavedCode" className="linking">
 					Codes
 				</Link>
 				<Link to="/messages" className="linking">
 					Chat
 				</Link>
-				<img className="search-icon" src={Search} alt="search icon" />
-				<Button id="logout" className="linking">
+				
+				<a href="/search">
+					<img className="search-icon" src={Search} alt="search icon" />
+				</a>
+
+
+				<Button id="logout" className="linking" onClick={handleClick}>
 					Logout
 				</Button>
+
+
 			</div>
 		</div>
 	);
