@@ -39,6 +39,14 @@
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.display_msgs_bar::-webkit-scrollbar {
+	display: none;
+}
+.display_msgs_bar > * {
+	margin-bottom: 10px;
 }
 .received_msg {
 	background-color: #743b8c;
