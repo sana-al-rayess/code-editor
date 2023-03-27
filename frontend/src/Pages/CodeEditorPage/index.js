@@ -21,7 +21,7 @@ const CodeEditor = () => {
       url: 'https://code-compiler.p.rapidapi.com/v2',
       headers: {
         'content-type': 'application/x-www-form-urlencoded',
-        'X-RapidAPI-Key': '27592b9488msh6c58c67cbb4a1f7p1607b5jsn364d129f6813',
+        'X-RapidAPI-Key': 'cbdc674ff1msh892f29bf6a57b00p184d9ejsn36e5f91cc1ff',
         'X-RapidAPI-Host': 'code-compiler.p.rapidapi.com'
       },
       data: encodedParams
@@ -36,9 +36,23 @@ const CodeEditor = () => {
       console.error(error);
     }
   };
+  
 
-  const handleSaveClick = () => {
-    alert('Code saved successfully!');
+  const handleSaveClick = async () => {
+    const data = {
+      title: 'python', // set your code file title here
+      text: inputValue,
+      description: 'clean code' // add description if needed
+    };
+
+    try {
+      const response = await axios.post('http://localhost:8000/api/save-code', data);
+      console.log(response.data);
+      alert('Code saved successfully!');
+    } catch (error) {
+      console.error(error);
+      alert('Error saving code. Please try again later.');
+    }
   };
 
   const handleInputChange = (event) => {

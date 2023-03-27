@@ -38,7 +38,7 @@ const LoginForm = () => {
     <div>
       <div className="container flex">
         <div className="flex column center">
-          <a  href="/" className="login-title white flex text-decoration-none" >
+          <a  href="/" className="login-title-main white flex text-decoration-none" >
             <span style={{ color: '#0DD99F' }}>PY</span>THONIC
           </a>
 

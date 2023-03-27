@@ -93,13 +93,19 @@
   box-shadow: 0 0 10px #0DD99F;
 }
 
-
-
-.login-title {
-  font-size: 40px;
+.login-title-main{
+  font-size: 60px;
   text-align: center;
   margin-bottom: 5vh;
+  display: inline-block;
+  padding-top: 20px;
+}
 
+.login-title {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 4vh;
+  display: inline-block;
 }
 
 .login-container1>label {
@@ -112,7 +118,7 @@
   height: 30px;
   margin: 1vh 0 3vh 0;
 
-  border-color: #553D65;
+  border: 2px solid #553D65;
 }
 
 .login-container1>input:hover {

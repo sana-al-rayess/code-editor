@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
 
 }
 
@@ -48,4 +48,27 @@
     color: #0DD99F;
     letter-spacing: 10px;
     padding-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-box {
+        flex: 1 0 80%;
+        margin: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .feedback-title {
+        font-size: 30px;
+    }
+
+    .review {
+        font-size: 18px;
+    }
 }

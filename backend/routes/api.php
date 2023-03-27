@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ActionContoller;
+use App\Http\Controllers\ActionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +15,23 @@ use App\Http\Controllers\ActionContoller;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::get('/users', [ActionController::class, 'getUsers']);
+Route::post('/save-code', [ActionController::class, 'saveCode']);
+
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
     Route::post('register', 'register');
     Route::post('logout', 'logout');
     Route::post('refresh', 'refresh');
-
 });
-Route::group(['middleware' => 'auth:api'], function () {});
+
+
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::post('/getmsgs', [ActionController::class, 'getMessages']);
+    Route::post('/sendmsgs', [ActionController::class, 'sendMessage']);
+});
+
+
+
+
