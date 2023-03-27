@@ -40,6 +40,14 @@ function Search_bar() {
       <div id="search">
         <input id="u_search" type="text" value={inputValue} onChange={handleInputChange} placeholder="Search for users" />
       </div>
+      <div className="cards">
+        {users.map(user => (
+          <div className="user_cards" key={user.id}>
+            <p className="text_user"> {user.name}</p>
+            <p className="text_user"> {user.email}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
