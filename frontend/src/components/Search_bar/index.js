@@ -20,6 +20,14 @@ function Search_bar() {
       setUsers(filteredUsers);
     };
 
+    const debounceSearch = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(searchUsers, delay);
+    };
+    debounceSearch();
+
+    return () => clearTimeout(timeoutId);
+
   }, [inputValue]);
 
 
