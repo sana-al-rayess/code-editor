@@ -45,6 +45,7 @@ function Search_bar() {
           <div className="user_cards" key={user.id}>
             <p className="text_user"> {user.name}</p>
             <p className="text_user"> {user.email}</p>
+            <Button id="chat" value={user.id} onClick={() => window.location.href = "http://localhost:3000/messages"}>Say Hello</Button>
           </div>
         ))}
       </div>
