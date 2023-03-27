@@ -9,25 +9,29 @@ const Messages = () => {
 	const [messages, setMessages] = useState([]);
 
 	const user_id = localStorage.getItem("user_id");
-
-	useEffect(() => {
+	const fetch_messages = () => {
 		axios({
 			method: "post",
 			url: "http://localhost:8000/api/getmsgs",
 			data: {
-				sender_id: 3,
+				sender_id: user_id,
 				recepient_id: 1,
 			},
 		}).then((res) => {
 			const messages = res.data.response;
 			setMessages(messages);
 		});
+	};
+
+	useEffect(() => {
+		fetch_messages();
 	}, []);
+
 	return (
 		<div className="message_card">
 			<NameBar />
 			<MessagesContent messages={messages} />
-			<SendBar />
+			<SendBar update={fetch_messages} />
 		</div>
 	);
 };
