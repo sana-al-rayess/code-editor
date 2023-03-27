@@ -12,7 +12,7 @@ class SavedCode extends Model
         "user_id",
         "title",
         "description",
-        "text"
+        "text",
     ];
 
     // public function saved(): BelongsTo
