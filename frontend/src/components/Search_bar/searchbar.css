@@ -5,8 +5,11 @@
   height: 2rem;
 }
 
-.search {
+#search {
   align-items: center;
   text-align: center;
   margin-top: 1.5rem;
 }
+
+
+
