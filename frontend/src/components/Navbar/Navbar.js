@@ -5,11 +5,11 @@ import Search from "../../images/whitesearch.png";
 import React, { useState } from "react";
 
 const Navbar = () => {
-
 	const [clicked, setClicked] = useState(false);
 
 	const handleClick = () => {
 		window.location.href = "/login";
+		localStorage.clear();
 	};
 	return (
 		<div className="navbar">
@@ -29,17 +29,14 @@ const Navbar = () => {
 				<Link to="/messages" className="linking">
 					Chat
 				</Link>
-				
+
 				<a href="/search">
 					<img className="search-icon" src={Search} alt="search icon" />
 				</a>
 
-
 				<Button id="logout" className="linking" onClick={handleClick}>
-					Logout
+					{localStorage.getItem("user_id") ? "Log Out" : "Log in"}
 				</Button>
-
-
 			</div>
 		</div>
 	);
