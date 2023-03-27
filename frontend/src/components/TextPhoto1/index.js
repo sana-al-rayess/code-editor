@@ -1,23 +1,27 @@
-import React, { useState } from "react";
-import Image from "../../images/py1.png";
+import React from "react";
+import Image from "../../images/img2.jpg";
+import './textphoto.css';
 
-
-
-
-const textPhoto = () => {
-
+const PhotoAndText = ({ photo, text1, text2 }) => {
     return (
-
-        <div className="flex slogan2 ">
-            <div className="flex column slogan2 container2">
-                <div className="slogan-txt4"><p>Languages Supported</p></div>
-                <div><p className="slogan-txt1">Our online IDE supports Python<br /> but we will be adding multiple<br /> programming languages soon!</p></div>
-            </div>
-            {/* <div><img className="img" src={Image} alt="python1" /></div> */}
-
+      <div className="photo-text-container">
+        <img className="photo-box" src={Image} alt="Photo" />
+        <div className="text-box">
+          <div style={{ marginBottom: "10px" }}>
+            <p className="slogan-txt4">Languages Supported</p>
+          </div>
+          <div>
+            <p className="slogan-txt1">
+              Our online IDE supports <br/>Python but we will be adding<br /> multiple programming languages soon!
+            </p>
+          </div>
         </div>
+      </div>
+    );
+  };
+  
+  export default PhotoAndText;
 
 
-    )
-}
-export default textPhoto;
+
+
