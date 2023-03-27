@@ -134,8 +134,8 @@ const CodeEditor = () => {
           <div className='save-data-container'>
             <div className='save-data-content'>
               <div className='save-data-header'>
-                <h2>Save Input Data</h2>
-                <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
+                <h2 className='head'>Save Input Data</h2>
+               
               </div>
               <div className='save-data-form'>
                 <div className='save-data-input'>
@@ -147,6 +147,7 @@ const CodeEditor = () => {
                   <textarea id='description-input' value={descriptionValue} onChange={handleDescriptionChange} />
                 </div>
                 <button className='save-button' onClick={handleSaveDataClick}>Save</button>
+                <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
               </div>
             </div>
           </div>
