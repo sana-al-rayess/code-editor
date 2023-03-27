@@ -10,7 +10,7 @@ const Navbar = () => {
 				<span>Py</span>thonic
 			</div>
 			<div className="links">
-				<Link to="/" className="linking">
+				<Link to="/home" className="linking">
 					Home
 				</Link>
 				<Link to="/editor" className="linking">
