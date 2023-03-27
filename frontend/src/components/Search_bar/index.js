@@ -30,6 +30,10 @@ function Search_bar() {
 
   }, [inputValue]);
 
+  const handleInputChange = event => {
+    setInputValue(event.target.value);
+  };
+
 
   return (
     <>
