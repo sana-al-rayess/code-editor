@@ -10,14 +10,15 @@
     width: 30% !important;
    
     margin-right: 20px;
-    padding: 30px;
+    padding: 40px;
+    
     
   }
   
   .text-box {
     display: flex;
     flex-direction: column;
-    margin-left: 20rem;
+    margin-left: 10rem;
 
   }
   
