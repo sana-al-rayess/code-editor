@@ -18,13 +18,7 @@ const CodeEditor = () => {
     encodedParams.append("LanguageChoice", "5");
     encodedParams.append("Program", inputValue);
   
-    // Check if the input value contains valid Python code
-    const isPythonCode = /^[ \t]*(def|class|if|for|while|try|with|@|[a-zA-Z0-9_]+)[ \t]*(\n|[:\(,])/m.test(inputValue);
-    if (!isPythonCode) {
-      // If the input value does not contain valid Python code, show an error message
-      setOutputValue("Invalid Python code. Please enter valid Python code.");
-      return;
-    }
+   
   
     const options = {
       method: 'POST',
@@ -40,12 +34,16 @@ const CodeEditor = () => {
     try {
       const response = await axios.post('https://code-compiler.p.rapidapi.com/v2', encodedParams, options);
       const output = response.data.Result;
-      console.log(response);
-      setOutputValue(output);
+      if (output) {
+        setOutputValue(output);
+      } else {
+        setOutputValue("Invalid Python code. Please enter valid Python code.");
+      }
     } catch (error) {
       console.error(error);
     }
   };
+  
   
 
   const handleSaveClick = async () => {
