@@ -3,7 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(to bottom, #36184b, #553d65, #290840);
+	background-color: linear-gradient(to bottom, #16112d, #160a26, #290840);
 }
 .navbar {
 	width: 100vw;

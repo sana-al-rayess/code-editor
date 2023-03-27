@@ -39,6 +39,14 @@
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.display_msgs_bar::-webkit-scrollbar {
+	display: none;
+}
+.display_msgs_bar > * {
+	margin-bottom: 10px;
 }
 .received_msg {
 	background-color: #743b8c;
@@ -69,13 +77,15 @@
 .send_input {
 	width: 80%;
 	height: 100%;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 20px;
 	outline: none;
+	color: black;
 }
 .send_btn {
 	height: 100%;
 	padding: 0 20px;
 	border-radius: 20px;
 	background-color: #0dd99f;
+	cursor: pointer;
 }

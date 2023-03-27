@@ -17,6 +17,9 @@ const Messages = () => {
 				sender_id: user_id,
 				recepient_id: 1,
 			},
+			headers: {
+				Authorization: `Bearer ${localStorage.getItem("token")}`,
+			},
 		}).then((res) => {
 			const messages = res.data.response;
 			setMessages(messages);

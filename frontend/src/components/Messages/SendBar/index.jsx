@@ -15,6 +15,9 @@ const SendBar = ({ update }) => {
 				recepient_id: 1,
 				message,
 			},
+			headers: {
+				Authorization: `Bearer ${localStorage.getItem("token")}`,
+			},
 		}).then((res) => {
 			console.log(res.data);
 			update();
