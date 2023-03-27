@@ -52,7 +52,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #36184B, #553D65, #5B466A);
+    background: linear-gradient(to bottom, #16112D, #160A26, #290840);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -61,11 +61,11 @@
     width: 120%;
     background-color: white;
     padding: 5vh;
-    box-shadow: 0 0 10px #0DD99F;
+    box-shadow: 0 0 20px #0DD99F;
 }
 
 .login-title{
-    font-size: 30px;
+    font-size: 30px !important;
     text-align: center;
     margin-bottom: 5vh;
     display: inline-block;

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Button from "../Button/button";
+
 import './sloganlanding.css';
 
 const Slogan = () => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-    setClicked(true);
+    window.location.href = "/reg";
   };
 
   return (
@@ -20,7 +21,8 @@ const Slogan = () => {
         <div>
           <p className="slogan-txt2"> PYTHONIC is powerful IDE with additional<br /> features only a cloud application can give you!</p></div>
         <div>
-          <Button className="padding" onClick={handleClick} disabled={clicked}>Get Started</Button>
+          <Button  onClick={handleClick}>Get Started</Button>
+                   
         </div>
 
 

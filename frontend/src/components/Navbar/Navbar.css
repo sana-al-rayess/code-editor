@@ -60,10 +60,17 @@ span {
 #logout:active {
   transform: translateY(4px);
 }
-.search-icon{
+.search-icon {
   width: 30px;
   height: auto;
+  transition: transform 0.3s ease-in-out;
 }
+
+.search-icon:hover {
+  transform: scale(1.2);
+  border-bottom: 3px solid #0DD99F;
+}
+
 
 /* Tablet styles */
 @media only screen and (max-width: 768px) {

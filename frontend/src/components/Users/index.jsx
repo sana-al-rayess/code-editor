@@ -4,7 +4,7 @@ const Users = () => {
 	return (
 		<div className="user_card">
 			<div className="user_img">
-				<img src="" alt="" srcset="" />
+				<img src="" alt="" />
 			</div>
 			<div className="user_card_info">
 				<p className="user_name">Mohamad Atout</p>
