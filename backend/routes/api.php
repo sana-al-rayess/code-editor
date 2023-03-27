@@ -17,7 +17,7 @@ use App\Http\Controllers\ActionController;
 */
 
 Route::get('/users', [ActionController::class, 'getUsers']);
-Route::post('/save-code', [ActionController::class, 'saveCode']);
+
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
@@ -30,6 +30,8 @@ Route::controller(AuthController::class)->group(function () {
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/getmsgs', [ActionController::class, 'getMessages']);
     Route::post('/sendmsgs', [ActionController::class, 'sendMessage']);
+    Route::post('/save-code', [ActionController::class, 'saveCode']);
+    
 });
 
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\SavedCode;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class ActionController extends Controller
@@ -40,7 +41,7 @@ class ActionController extends Controller
             "response" => $message,'message' => 'Success'
         ]);
     }
-    public function saveCode(Request $request)
+public function saveCode(Request $request)
 {
     $request->validate([
         'title' => 'required|string|max:255',
@@ -48,10 +49,8 @@ class ActionController extends Controller
         'description' => 'nullable|string',
     ]);
 
-    $user = Auth::user();
-
     $savedCode = SavedCode::create([
-        'user_id' => $user->id,
+        'user_id' => Auth::id(),
         'title' => $request->input('title'),
         'text' => $request->input('text'),
         'description' => $request->input('description'),
