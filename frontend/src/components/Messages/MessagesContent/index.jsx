@@ -1,10 +1,17 @@
 import "../messages.css";
 
-const MessagesContent = () => {
+const MessagesContent = ({ messages }) => {
 	return (
 		<div className="display_msgs_bar">
-			<p className="sent_msg">Hi</p>
-			<p className="received_msg">Ya hala</p>
+			{messages.map((message) => {
+				return (
+					<p
+						className={message.sender_id === 3 ? "sent_msg" : "received_msg"}
+						key={message.message}>
+						{message.message}
+					</p>
+				);
+			})}
 		</div>
 	);
 };
