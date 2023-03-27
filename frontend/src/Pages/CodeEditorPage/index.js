@@ -38,22 +38,31 @@ const CodeEditor = () => {
   };
   
 
-  const handleSaveClick = async () => {
-    const data = {
-      title: 'python', 
-      text: inputValue,
-      description: 'clean code'
-    };
-
-    try {
-      const response = await axios.post('http://localhost:8000/api/save-code', data);
-      console.log(response.data);
-      alert('Code saved successfully!');
-    } catch (error) {
-      console.error(error);
-      alert('Error saving code. Please try again later.');
-    }
+ const handleSaveClick = async () => {
+  const token = localStorage.getItem('token');
+  const title = prompt('Enter title for the code:');
+  const description = prompt('Enter description for the code:');
+  const data = {
+    title: title || '', 
+    text: inputValue,
+    description: description || ''
   };
+
+  try {
+    const headers = {
+      'Authorization': `Bearer ${token}`
+    };
+    
+    const response = await axios.post('http://localhost:8000/api/save-code', data, { headers });
+    
+    console.log(response.data);
+    alert('Code saved successfully!');
+  } catch (error) {
+    console.error(error);
+    alert('Error saving code. Please try again later.');
+  }
+};
+
   const handleDownloadClick = () => {
     const blob = new Blob([inputValue], {type: 'text/plain'});
     const url = URL.createObjectURL(blob);

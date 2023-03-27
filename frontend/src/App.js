@@ -13,7 +13,11 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
+<<<<<<< HEAD
+			    <Route path="/" element={<HomePage />} />
+=======
 				<Route path="/" element={<HomePage />} />
+>>>>>>> 24f54bdf70d69a1a53e43660617a177769d26fa6
 				<Route path="/Home" element={<HomePage />} />
 				<Route path="/reg" element={<RegistrationPage />} />
 				<Route path="/login" element={<LoginPage />} />
