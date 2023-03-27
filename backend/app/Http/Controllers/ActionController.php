@@ -17,9 +17,9 @@ class ActionController extends Controller
         return response()->json(['users' => $users, 'message' => 'Success']);
     }
 
-    public function getCodes()
+    public function getCodes(Request $request)
     {
-        $savedCodes = SavedCode::all();
+        $savedCodes = SavedCode::where("user_id", $request->user_id)->get();
         $response = [
             'success' => true,
             'data' => $savedCodes,
