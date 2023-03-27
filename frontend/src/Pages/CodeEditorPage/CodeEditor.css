@@ -130,7 +130,7 @@ width: 750px;
 .run {
  margin-right: 10px;
 }
-.run, .save , .download,.close-button{
+.run, .save , .download,.close-button,.save-button{
    background-color: #0DD99F;
  color:black;
  border: none;
@@ -139,9 +139,12 @@ width: 750px;
  cursor: pointer;
 }
 
-.run:hover, .save:hover, .download:hover {
+.run:hover, .save:hover, .download:hover,.close-button:hover,.save-button:hover {
  background-color: #7b0d8a;
 
+}
+.close-button{
+  margin-left: 10px;
 }
 .download{
  margin-left: 10px;
@@ -153,9 +156,29 @@ width: 750px;
  margin-top: 120px;
  color: black;
  width: fit-content;
- margin-left: 20px;
+ margin-left: 50px;
 }
 .code-editor-page {
  display: flex;
  justify-content: center;
+}
+.save-data-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.save-data-input input, 
+.save-data-input textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.save-data-input textarea {
+  height: 150px;
 }
