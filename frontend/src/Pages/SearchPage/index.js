@@ -9,6 +9,7 @@ import './search.css';
 
 const SearchPage = () => {
 
+
   const [isVisible, setIsVisible] = useState(false);
   let timeoutId;
 
