@@ -71,7 +71,7 @@
   height: auto;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #36184B, #553D65, #5B466A);
+  background: linear-gradient(to bottom, #16112D, #160A26, #290840);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -81,7 +81,7 @@
   height: auto;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #36184B, #553D65, #5B466A);
+  background: linear-gradient(to bottom, #16112D, #160A26, #290840);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -91,6 +91,7 @@
   background-color: white;
   padding: 5vh;
   box-shadow: 0 0 10px #0DD99F;
+  
 }
 
 .login-title-main{
@@ -110,6 +111,7 @@
 
 .login-container1>label {
   font-size: 20px;
+  color: #36184B;
 
 }
 
@@ -117,7 +119,7 @@
   width: 100%;
   height: 30px;
   margin: 1vh 0 3vh 0;
-
+  color: #36184B;
   border: 2px solid #553D65;
 }
 
@@ -150,7 +152,7 @@
 }
 
 .error {
-  color: #553D65;
+  color: #0DD99F;
 }
 
 /* Media queries for tablet devices */

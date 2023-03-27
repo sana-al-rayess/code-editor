@@ -7,8 +7,9 @@
 * {
     margin: 0;
     font-family: 'Audiowide', sans-serif;
-    background-color: linear-gradient(to bottom, #36184B, #553D65, #290840);
-
+    /* background-color: linear-gradient(to bottom, #160A26, #553D65, #290840); */
+    background-color: linear-gradient(to bottom, #16112D, #160A26, #290840);
+    /* background-color: #160A26; */
 }
 
 .container {
@@ -48,7 +49,8 @@
 .content {
     font-family: 'Audiowide';
     /* background-color: #290840; */
-    background: linear-gradient(to bottom, #36184B, #553D65, #290840);
+    /* background: linear-gradient(to bottom, #36184B, #553D65, #290840); */
+    background-color: linear-gradient(to bottom, #16112D, #160A26, #290840);
     color: white;
     display: flex;
     flex-direction: column;
@@ -110,15 +112,6 @@ span {
 
 }
 
-.slogan-txt4 {
-    /* font-size: 5vh; */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 64px;
-    text-align: center;
-    padding-top: 50px;
-}
 
 .column {
     flex-direction: column;
@@ -173,3 +166,34 @@ span {
     }
       
   }
+
+
+
+  photo-text-container {
+    display: "flex";
+    align-Items: "center";
+    justify-Content: "center";
+    gap: "5rem";
+}
+
+.photo-box {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+
+.slogan-txt4 {
+    /* font-size: 5vh; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 64px;
+    text-align: center;
+    padding-top: 50px;
+}

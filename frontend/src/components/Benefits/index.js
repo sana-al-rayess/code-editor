@@ -9,7 +9,7 @@ const benefits = () => {
 
     return (
         <div className="space">
-            <p className="slogan-txt">What are the benefits of Pythonic?</p>
+            <p className="slogan-txt-benefits">What are the benefits of Pythonic?</p>
            
                 <div className="icon-box">
                     <div className="box"><img src={Image2} alt="icon" />Chat</div>

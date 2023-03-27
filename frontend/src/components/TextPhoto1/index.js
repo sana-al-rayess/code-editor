@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../images/img2.jpg";
+import Image from "../../images/img7.png";
 import './textphoto.css';
 
 const PhotoAndText = ({ photo, text1, text2 }) => {

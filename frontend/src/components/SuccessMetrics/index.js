@@ -5,7 +5,7 @@ const successMetrics = () => {
 
     return (
         <div>
-            <p className="slogan-txt">Success Metrics Reported By Customers</p>
+            <p className="slogan-txt-success">Success Metrics Reported By Customers</p>
 
                        <div className="feedback">
                 <div className="success-box">

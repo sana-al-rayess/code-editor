@@ -1,99 +1,85 @@
 import React, { useState } from "react";
-const RegistrationForm = () => {
+import axios from 'axios';
+import './register.css';
+
+
+function RegisterForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [age, setAge] = useState("");
   const [location, setLocation] = useState("");
   const [gender, setGender] = useState("");
-  const [error, setError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [ageError, setAgeError] = useState("");
+  const [locationError, setLocationError] = useState("");
+  const [genderError, setGenderError] = useState("");
+
 
   const handleSignUpClick = () => {
     window.location.href = "/login";
   };
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+  const handleSubmit = async (e) => {
+    const form = e.target;
+    setEmailError("");
+    setPasswordError("");
+    setNameError("");
+    setAgeError("");
+    setLocationError("");
+    setGenderError("");
+    e.preventDefault();
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
-  };
-
-  const handleAgeChange = (event) => {
-    setAge(event.target.value);
-  };
-
-  const handleLocationChange = (event) => {
-    setLocation(event.target.value);
-  };
-
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (name.trim() === "") {
-      setError("Name cannot be empty");
+    if (!name) {
+      setNameError("Please enter your name");
       return;
     }
 
-    if (email.trim() === "") {
-      setError("Email cannot be empty");
-      return;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      setError("Invalid email address");
+    if (!email) {
+      setEmailError("Please enter your email");
       return;
     }
 
-    if (password === "") {
-      setError("Password cannot be empty");
-      return;
-    } else if (password.length < 6) {
-      setError("Password must be at least 6 characters long");
+    if (password.length < 6) {
+      setPasswordError("Password must be at least 6 characters long");
       return;
     }
 
-  
-    if (age === "") {
-      setError("Age cannot be empty");
+    if (!age) {
+      setAgeError("Please enter your age");
       return;
     }
 
-    if (location.trim() === "") {
-      setError("Location cannot be empty");
+    if (!location) {
+      setLocationError("Please enter your location");
       return;
     }
 
-    if (gender === "") {
-      setError("Gender cannot be empty");
+    if (!gender) {
+      setGenderError("Please select your gender");
       return;
     }
 
-    console.log(
-      `Name: ${name} Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}, Age: ${age}, Location: ${location}, Gender: ${gender}`
-    );
 
-    setName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setAge("");
-    setLocation("");
-    setGender("");
-    setError("");
-  };
+    const formData = new FormData(form);
+
+
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/register', formData);
+      const { user, authorisation } = response.data;
+      localStorage.setItem('token', authorisation.token);
+      localStorage.setItem("name", response.data.user.name);
+      localStorage.setItem("user_id", response.data.user.id);
+      localStorage.setItem("email", response.data.user.email);
+      console.log('User created successfully:', user);
+      window.location.href = "/Home";
+    } catch (error) {
+      console.error(error);
+    }
+
+  }
 
   return (
     <div>
@@ -104,43 +90,50 @@ const RegistrationForm = () => {
           </a>
           <div id="signup-content" className="register-content round-edges">
 
-            <div id="login-content" className="login-container1 flex column">
-              <p className="login-title dark-purple">Register</p>
-              <label htmlFor="name">Username</label>
-              <input id="name" className="input round-edges" type="text" />
-              <label htmlFor="email">Email</label>
-              <input id="email" className="input round-edges" type="text" />
-              <label htmlFor="password">Password</label>
-              <input id="password" className="input round-edges" type="password" />
-              <label htmlFor="gender">Gender:</label>
-              <select className="round-edges input-border display-block" id="gender" name="gender" required>
-                <option>Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select><br/>
-              <label htmlFor="age">Age:</label>
-              <input className="round-edges input-border display-block" type="number" id="age" name="age"
-                required />
-              
-              <label htmlFor="location">Location:</label>
-              <input className="round-edges input-border display-block" type="text" id="location" name="location"
-                required></input>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div id="login-content" className="login-container1 flex column">
+                <p className="login-title dark-purple">Register</p>
+                <label htmlFor="name" required>Name</label>
+                <input id="name"className="input round-edges"type="text"name="name"onChange={(e) => setName(e.target.value)} required/>
+                {nameError && <p className="error">{nameError}</p>}
+                <label htmlFor="email">Email</label>
+                <input id="email" className="input round-edges" type="text" name="email" onChange={(e) => setEmail(e.target.value)}required  />
+                {emailError && <p className="error">{emailError}</p>}
+                <label htmlFor="password">Password</label>
+                <input id="password" className="input round-edges" type="password" name="password" onChange={(e) => setPassword(e.target.value)}required/>
+                {passwordError && <p className="error">{passwordError}</p>}
 
-            {error && <p className="error">{error}</p>}
-            <button id="signup-btn" className="round-edges btn-signup" onClick={handleSubmit}>
-              Sign Up
-            </button>
+                <label htmlFor="age">Age:</label>
+                <input className="round-edges input display-block" type="number" id="age" name="age" onChange={(e) => setAge(e.target.value)} required/>
+                {ageError && <p className="error">{ageError}</p>}
+
+                <label htmlFor="location">Location:</label>
+                <input className="round-edges input display-block" type="text" id="location" name="location" onChange={(e) => setLocation(e.target.value)} required/>
+                {locationError && <p className="error">{locationError}</p>}
+
+                <label htmlFor="gender">Gender:</label>
+                <select className="round-edges input display-block" id="gender" name="gender" onChange={(e) => setGender(e.target.value)} required>
+                  <option>Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                {genderError && <p className="error">{genderError}</p>}
+              </div>
+              <button id="signup-btn" className="round-edges btn-signup" type="submit">
+                Sign Up
+              </button>
+            </form>
+
+
             <div className="flex row">
               <p className="dark-purple">Already have an account?</p>
               <a href="#" className="content-btn" id="signup-content-btn btn" onClick={handleSignUpClick}>Sign In</a>
-
             </div>
           </div>
         </div>
-      </div></div>
+      </div>
+    </div>
   );
 };
 
-
-export default RegistrationForm;
+export default RegisterForm;

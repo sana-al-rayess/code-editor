@@ -30,8 +30,7 @@
     flex: 1 0 300px;
     width: 100%;
     border: 4px solid #290840;
-
-
+    
 }
 
 .feedback-box:hover {
@@ -39,16 +38,46 @@
     border:5px solid #0DD99F;
 }
 
-.feedback-title {
+  
+  @keyframes flash-green {
+    0% {
+      border-color: #290840;
+    }
+    50% {
+      border-color:#0DD99F;
+    }
+    100% {
+      border-color: #290840;
+    }
+  }
+  
+
+  .feedback-title {
     text-align: center;
     font-weight: 500;
-    align-items: center;
     font-size: 50px;
     padding-bottom: 20px;
     color: #0DD99F;
-    letter-spacing: 10px;
     padding-top: 40px;
-}
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #0DD99F;
+    animation: typing 5s steps(20, end), blink-caret .5s step-end infinite;
+    animation-iteration-count: infinite; 
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0DD99F }
+  }
+  
+  
+
 
 @media (max-width: 768px) {
     .feedback {
