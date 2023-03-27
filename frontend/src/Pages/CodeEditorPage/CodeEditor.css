@@ -125,7 +125,7 @@ margin-left: 18px;
 .run {
   margin-right: 10px;
 }
-.run, .save {
+.run, .save , .download{
     background-color: #0DD99F;
   color:black;
   border: none;
@@ -134,7 +134,10 @@ margin-left: 18px;
   cursor: pointer;
 }
 
-.run:hover, .save:hover {
+.run:hover, .save:hover, .download:hover {
   background-color: #7b0d8a;
 
+}
+.download{
+  margin-left: 10px;
 }
