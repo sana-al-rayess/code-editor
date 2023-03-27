@@ -32,7 +32,8 @@ const LoginForm = () => {
     }
 
     console.log(`Email: ${email}, Password: ${password}`);
-  };
+
+ 
 
   return (
     <div>
@@ -44,6 +45,8 @@ const LoginForm = () => {
 
           <div id="registercontent" className="register-content round-edges">
 
+
+            <form onSubmit={handleSubmit}>
             <div id="login-content" className="login-container flex column">
               <p className="login-title dark-purple">Login</p>
               <label className="dark-purple" for="login-email">Email</label>
@@ -55,7 +58,8 @@ const LoginForm = () => {
             <div className="flex">
               {error && <p className="error">{error}</p>}
             </div>
-            <button type="button" className="login-btn round-edges btn" onClick={handleSubmit}>Log In</button>
+            <button type="submit" className="login-btn round-edges btn">Log In</button>
+            </form>
             <div className="flex row">
               <p className="dark-purple">Don't have an account?</p>
               <a href="#" className="content-btn" id="signup-content-btn btn" onClick={handleSignUpClick}>SignUp</a>
@@ -67,6 +71,6 @@ const LoginForm = () => {
     </div>
   );
 };
-
+}
 
 export default LoginForm;
