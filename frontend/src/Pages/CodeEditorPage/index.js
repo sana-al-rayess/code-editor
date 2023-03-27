@@ -40,9 +40,9 @@ const CodeEditor = () => {
 
   const handleSaveClick = async () => {
     const data = {
-      title: 'python', // set your code file title here
+      title: 'python', 
       text: inputValue,
-      description: 'clean code' // add description if needed
+      description: 'clean code'
     };
 
     try {

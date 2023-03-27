@@ -37,6 +37,10 @@
 .sidebar_file:hover {
   background-color: #7b0d8a;
 }
+.output-tab:hover{
+  background-color:#7b0d8a ;
+
+}
 .sidebar_file-name {
   font-size: 18px;
   margin-left: 5px;
