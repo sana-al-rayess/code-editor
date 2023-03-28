@@ -11,9 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ActionController extends Controller
 {
-    public function getUsers()
+    public function getUsers($id)
     {
-        $users = User::all();
+        $user = User::find($id);
+        $users = User::where("id", "!=", "$user[id]")
+                    ->where("type", "!=", "admin")
+                    ->get();
         return response()->json(['users' => $users, 'message' => 'Success']);
     }
 
