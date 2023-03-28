@@ -95,3 +95,7 @@
 
 <br>
 
+<h1 align="left">ER Diagram</h1><br>
+
+
+| ![Image 1](./readme-images/editordb.png) | 
