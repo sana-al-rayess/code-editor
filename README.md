@@ -57,7 +57,7 @@
 
 | Search | Chat | Editor |
 | --- | --- | --- |
-| ![Image 1](./readme-images/Search.png) | ![Image 2](./readme-images/searc.png) | ![Image 3](./readme-images/CodeEditor.png) |
+| ![Image 1](./readme-images/Search.png) | ![Image 2](./readme-images/Searc.png) | ![Image 3](./readme-images/CodeEditor.png) |
 
 
 | Admin Panel |
@@ -71,7 +71,7 @@
 
 | Home page | Login | SignUp |
 | --- | --- | --- |
-| ![Image 1](./readme-images/Landing2.png) | ![Image 2](./readme-images/login2.png) | ![Image 3](./readme-images/Registration2.png) |
+| ![Image 1](./readme-images/Landing2.png) | ![Image 2](./readme-images/loginmock.png) | ![Image 3](./readme-images/Registration2.png) |
 
 | Search | Chat | Editor |
 | --- | --- | --- |
@@ -83,11 +83,15 @@
 
 | Home page | Login | SignUp |
 | --- | --- | --- |
-| ![Image 1](./readme-images/home1.png) | ![Image 2](./readme-images/login2.png) | ![Image 3](./readme-images/reg3.png) |
+| ![Image 1](./readme-images/home1.PNG) | ![Image 2](./readme-images/login3.PNG) | ![Image 3](./readme-images/reg3.PNG) |
 
 | Search | Chat | Editor |
 | --- | --- | --- |
-| ![Image 1](./readme-images/search3.png) | ![Image 2](./readme-images/chat3.png) | ![Image 3](./readme-images/editor3.png) |
+| ![Image 1](./readme-images/search3.PNG) | ![Image 2](./readme-images/chat3.PNG) | ![Image 3](./readme-images/editor3.PNG) |
+
+| Admin Panel |
+| --- | --- | --- |
+| ![Image 1](./readme-images/admin3.PNG) |
 
 <br>
 
