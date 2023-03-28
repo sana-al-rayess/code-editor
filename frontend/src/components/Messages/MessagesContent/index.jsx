@@ -4,13 +4,13 @@ const MessagesContent = ({ messages }) => {
 	const user_id = localStorage.getItem("user_id");
 	return (
 		<div className="display_msgs_bar">
-			{messages.map((message) => {
+			{messages.map((message, i) => {
 				return (
 					<p
 						className={
 							message.sender_id == user_id ? "sent_msg" : "received_msg"
 						}
-						key={message.message}>
+						key={i}>
 						{message.message}
 					</p>
 				);

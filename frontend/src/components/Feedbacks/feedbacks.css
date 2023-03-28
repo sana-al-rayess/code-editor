@@ -39,18 +39,28 @@
 }
 
 
-@keyframes flash-green {
-  0% {
-    border-color: #290840;
+  .feedback-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: #0DD99F;
+    padding-top: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #0DD99F;
+    animation: typing 5s steps(50, end), blink-caret .2s step-end infinite;
+    animation-iteration-count: infinite; 
   }
-  50% {
-    border-color:#0DD99F;
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #0DD99F;
+    }
   }
-  100% {
-    border-color: #290840;
-  }
-}
-
 
 .feedback-title {
   text-align: center;
