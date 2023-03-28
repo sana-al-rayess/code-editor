@@ -80,27 +80,35 @@ const CodeEditor = () => {
       text: inputValue,
       description: descriptionValue || ''
     };
-
+  
     try {
       const headers = {
         'Authorization': `Bearer ${token}`
       };
-
+  
       const response = await axios.post('http://localhost:8000/api/save-code', data, { headers });
-
+  
       console.log(response.data);
-      alert('Code saved successfully!');
+      const saveResult = document.querySelector('.save-result');
+      saveResult.innerHTML = 'Code saved successfully!';
     } catch (error) {
       console.error(error);
-      alert('Error saving code. Please try again later.');
+      const saveResult = document.querySelector('.save-result');
+      saveResult.innerHTML = 'Error saving code. Please try again later.';
     }
-
+  
     setShowInputData(false);
   };
+  
   return (
     <div>
       <Navbar />
+      <div className='save-result-container'>
+        <div className='save-result'>
+        </div>
+        </div>
       <div className='code-editor-page'>
+       
         <div className="code-editor-container">
           <div className="sidebar">
             <Sidebar />
@@ -110,7 +118,7 @@ const CodeEditor = () => {
               <div className='input-header'>
                 <div>
                   <FontAwesomeIcon icon={faPython} />
-                  <span className='input-header-title'>App.py</span>
+                  <span className='sidebar_file-name '>App.py</span>
                 </div>
                 <div className='input-header-buttons'>
                   <button className='run' onClick={handleRunClick}>Run</button>
@@ -134,7 +142,7 @@ const CodeEditor = () => {
           <div className='save-data-container'>
             <div className='save-data-content'>
               <div className='save-data-header'>
-                <h2 className='head'>Save Input Data</h2>
+                <h2 className='head-save-title'>Save Input Data</h2>
                
               </div>
               <div className='save-data-form'>
@@ -147,7 +155,7 @@ const CodeEditor = () => {
                   <textarea id='description-input' value={descriptionValue} onChange={handleDescriptionChange} />
                 </div>
                 <button className='save-button' onClick={handleSaveDataClick}>Save</button>
-                <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
+                 <button className='close-button' onClick={() => setShowInputData(false)}>Close</button>
               </div>
             </div>
           </div>

@@ -62,7 +62,7 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: .15em solid #0DD99F;
-    animation: typing 5s steps(20, end), blink-caret .5s step-end infinite;
+    animation: typing 5s steps(50, end), blink-caret .2s step-end infinite;
     animation-iteration-count: infinite; 
   }
   

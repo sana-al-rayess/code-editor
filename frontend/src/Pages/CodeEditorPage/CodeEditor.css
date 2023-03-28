@@ -162,10 +162,11 @@ width: 750px;
  display: flex;
  justify-content: center;
 }
-.save-data-input label {
+.save-data-input label,.head-save-title {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #0DD99F;
 }
 
 .save-data-input input, 
@@ -181,4 +182,16 @@ width: 750px;
 
 .save-data-input textarea {
   height: 150px;
+}
+
+.head-title,.title-input,.description-input{
+  color: #50044c;
+  font-size: 20px;
+}
+.save-result{
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  color: #0DD99F;
+  font-size: 20px;
 }
