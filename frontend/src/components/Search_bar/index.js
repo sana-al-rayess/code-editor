@@ -6,13 +6,13 @@ import Button from "../Button/button";
 function Search_bar() {
 	const [inputValue, setInputValue] = useState("");
 	const [users, setUsers] = useState([]);
-
+	const user_id = localStorage.getItem("user_id");
 	useEffect(() => {
 		const delay = 500;
 		let timeoutId;
 
 		const searchUsers = async () => {
-			const url = "http://127.0.0.1:8000/api/users";
+			const url = `http://127.0.0.1:8000/api/users/${user_id}`;
 			const response = await axios.get(url);
 			const data = response.data;
 			const filteredUsers = data.users.filter((user) =>
