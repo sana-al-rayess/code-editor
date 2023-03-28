@@ -56,6 +56,7 @@ class AuthController extends Controller
             'gender' => $request->gender,
             'location' => $request->location,
             'age'=> $request->age,
+            'type' => 'user'
         ]);
 
         $token = Auth::login($user);
