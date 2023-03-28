@@ -66,6 +66,9 @@
   justify-content: center;
 }
 
+.rdbcolor{
+  color: #290840 !important;
+}
 .container {
   width: 100%;
   height: auto;
@@ -113,6 +116,18 @@
   font-size: 20px;
   color: #36184B;
 
+}
+.login-container1>select {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #36184B;
+  border: 2px solid #290840;
+}
+.login-container1>select>option {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #36184B;
+  border: 2px solid #290840;
 }
 
 .login-container1>input {

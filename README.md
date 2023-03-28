@@ -13,11 +13,11 @@
 
 - 👨‍💻 Authors: Hassan Zein Al-Deen, Mhammad Atout, Mhammad Karim, Sana Al Rayess
 
-- 📫 How to reach out to  **@gmail.com**
+- 📫 How to reach out to Hassan Zein Al-Deen  **hassanzein-aldeen@gmail.com**
 
-- 📫 How to reach out to  **@gmail.com**
+- 📫 How to reach out to  Mhammad Atout  **mohamad.atout0@gmail.com**
 
-- 📫 How to reach out to  **@gmail.com**
+- 📫 How to reach out to  Mhammad Karim  **mhammadkarim@gmail.com**
 
 - 📫 How to reach out to Sana Al Rayess **rayess.sana@gmail.com**
 
@@ -27,10 +27,10 @@
 
 - 📝 References used in the project:
 
-- <ul><li><a href="https://youtu.be/mxHoPYFsTuk">Web Dev Simplified</a>
+- <ul><li><a href="https://youtube.com">Youtube</a>
   </li>
-  <li><a href="https://youtu.be/Iy7oFI76FpE" >Abdelrahman Gamal</a></li>
-  <li><a href="https://youtu.be/JttTcnidSdQ">Traversy Media</a></li>
+  <li><a href="https://w3schools.com" >W3schools</a></li>
+  <li><a href="https://chat.openai.com">Chat GPT</a></li>
   </ul><br>
 
 <h1 align="left">User Stories</h1>
@@ -57,7 +57,7 @@
 
 | Search | Chat | Editor |
 | --- | --- | --- |
-| ![Image 1](./readme-images/Search.png) | ![Image 2](./readme-images/searc.png) | ![Image 3](./readme-images/CodeEditor.png) |
+| ![Image 1](./readme-images/Search.png) | ![Image 2](./readme-images/Searc.png) | ![Image 3](./readme-images/CodeEditor.png) |
 
 
 | Admin Panel |
@@ -71,7 +71,7 @@
 
 | Home page | Login | SignUp |
 | --- | --- | --- |
-| ![Image 1](./readme-images/Landing2.png) | ![Image 2](./readme-images/login2.png) | ![Image 3](./readme-images/Registration2.png) |
+| ![Image 1](./readme-images/Landing2.png) | ![Image 2](./readme-images/loginmock.png) | ![Image 3](./readme-images/Registration2.png) |
 
 | Search | Chat | Editor |
 | --- | --- | --- |
@@ -83,11 +83,15 @@
 
 | Home page | Login | SignUp |
 | --- | --- | --- |
-| ![Image 1](./readme-images/home1.png) | ![Image 2](./readme-images/login2.png) | ![Image 3](./readme-images/Registration2.png) |
+| ![Image 1](./readme-images/home1.PNG) | ![Image 2](./readme-images/login3.PNG) | ![Image 3](./readme-images/reg3.PNG) |
 
 | Search | Chat | Editor |
 | --- | --- | --- |
-| ![Image 1](./readme-images/Search2.png) | ![Image 2](./readme-images/chat2.png) | ![Image 3](./readme-images/editor2.png) |
+| ![Image 1](./readme-images/search3.PNG) | ![Image 2](./readme-images/chat3.PNG) | ![Image 3](./readme-images/editor3.PNG) |
+
+| Admin Panel |
+| --- | --- | --- |
+| ![Image 1](./readme-images/admin3.PNG) |
 
 <br>
 
