@@ -12,7 +12,7 @@ const SavedCode = () => {
 			method: "post",
 			url: "http://localhost:8000/api/getCodes",
 			data: {
-				user_id: 5,
+				user_id: user_id,
 			},
 			headers: {
 				"content-type": "application/json",
