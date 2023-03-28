@@ -57,3 +57,7 @@ button {
 .Users_row::-webkit-scrollbar {
 	display: none;
 }
+
+.logoutBtn {
+	cursor: pointer;
+}
