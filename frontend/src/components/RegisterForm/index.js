@@ -16,6 +16,11 @@ function RegisterForm() {
   const [ageError, setAgeError] = useState("");
   const [locationError, setLocationError] = useState("");
   const [genderError, setGenderError] = useState("");
+ 
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
 
 
   const handleSignUpClick = () => {
@@ -40,7 +45,11 @@ function RegisterForm() {
     if (!email) {
       setEmailError("Please enter your email");
       return;
+    }else if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email");
+      return;
     }
+
 
     if (password.length < 6) {
       setPasswordError("Password must be at least 6 characters long");
