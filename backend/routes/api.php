@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ActionController;
 
-Route::get('/users', [ActionController::class, 'getUsers']);
+Route::get('/users/{id}', [ActionController::class, 'getUsers']);
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
