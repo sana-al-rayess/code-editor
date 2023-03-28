@@ -9,13 +9,14 @@ const Messages = () => {
 	const [messages, setMessages] = useState([]);
 
 	const user_id = localStorage.getItem("user_id");
+	const recepient_id = localStorage.getItem("recepient_id");
 	const fetch_messages = () => {
 		axios({
 			method: "post",
 			url: "http://localhost:8000/api/getmsgs",
 			data: {
 				sender_id: user_id,
-				recepient_id: 1,
+				recepient_id: recepient_id,
 			},
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem("token")}`,
