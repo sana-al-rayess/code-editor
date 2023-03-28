@@ -6,10 +6,14 @@ import React, { useState } from "react";
 
 const Navbar = () => {
 	const [clicked, setClicked] = useState(false);
-
+	const active_user = localStorage.getItem("user_id");
 	const handleClick = () => {
 		window.location.href = "/login";
 		localStorage.clear();
+	};
+
+	const handleRoute = (route) => {
+		return active_user ? route : "/reg";
 	};
 	return (
 		<div className="navbar">
@@ -23,14 +27,14 @@ const Navbar = () => {
 				<Link to="/editor" className="linking">
 					Code Editor
 				</Link>
-				<Link to="/SavedCode" className="linking">
+				<Link to={handleRoute("/SavedCode")} className="linking">
 					Codes
 				</Link>
-				<Link to="/messages" className="linking">
+				<Link to={handleRoute("/messages")} className="linking">
 					Chat
 				</Link>
 
-				<a href="/search">
+				<a href={handleRoute("/search")}>
 					<img className="search-icon" src={Search} alt="search icon" />
 				</a>
 
