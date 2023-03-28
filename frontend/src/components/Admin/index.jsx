@@ -6,22 +6,30 @@ import axios from "axios";
 
 const AdminStructure = () => {
 	const [users, setUsers] = useState([]);
+	const user_id = localStorage.getItem("user_id");
 
 	useEffect(() => {
 		axios({
 			method: "get",
-			url: "http://localhost:8000/api/users",
+			url: `http://localhost:8000/api/users/${user_id}`,
 		}).then((res) => {
 			const usersData = res.data.users;
 			setUsers(usersData);
 		});
 	}, []);
 
+	const handleLogout = () => {
+		window.location.href = "/login";
+		localStorage.clear();
+	};
+
 	return (
 		<div className="admin_main">
 			<div className="left">
 				<p>Users</p>
-				<button>Logout</button>
+				<button className="logoutBtn" onClick={handleLogout}>
+					Logout
+				</button>
 			</div>
 			<div className="right">
 				<div className="main_row">
