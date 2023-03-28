@@ -4,7 +4,7 @@ import { useState } from "react";
 const NameBar = () => {
 	return (
 		<div className="messager_name">
-			<p>Mohamad Atout</p>
+			<p>{localStorage.getItem("recepient_name")}</p>
 		</div>
 	);
 };
