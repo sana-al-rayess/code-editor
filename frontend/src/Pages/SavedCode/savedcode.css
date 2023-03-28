@@ -5,7 +5,10 @@
 
 .content {
 	width: 100vw;
-	height: 80vh;
+	height: 100vh;
 	display: flex;
-	overflow-y: scroll;
+	justify-content: center;
+	align-items: center;
+	/* overflow-y: scroll; */
+	text-align: center;
 }
