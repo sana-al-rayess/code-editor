@@ -79,17 +79,6 @@
 
 <br>
 
-<h1 align="left">Mockups:</h1><br>
-
-| Home page | Login | SignUp |
-| --- | --- | --- |
-| ![Image 1](./readme-images/Landing2.png) | ![Image 2](./readme-images/login2.png) | ![Image 3](./readme-images/Registration2.png) |
-
-| Search | Chat | Editor |
-| --- | --- | --- |
-| ![Image 1](./readme-images/Search2.png) | ![Image 2](./readme-images/chat2.png) | ![Image 3](./readme-images/CodeEditor2.png) |
-
-<br>
 <h1 align="left">Implementation</h1><br>
 
 | Home page | Login | SignUp |
