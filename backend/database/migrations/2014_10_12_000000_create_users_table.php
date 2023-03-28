@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('age');
             $table->string('gender');
+            $table->string('type');
             $table->timestamps();
         });
     }
