@@ -1,56 +1,43 @@
 .quotations {
-    height: 100px;
-    width: auto;
-    margin: 20px;
-    padding-top: 60px;
-    padding-left: 30px;
+  height: 100px;
+  width: auto;
+  margin: 20px;
+  padding-top: 60px;
+  padding-left: 30px;
 
 }
 
 .review {
-    color: white;
-    margin: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 
 .feedback {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .feedback-box {
-    background-color: #5B466A;
-    height: 500px;
-    /* width: 300px; */
-    margin: 50px;
-    flex: 1 0 300px;
-    width: 100%;
-    border: 4px solid #290840;
-    
+  background-color: #5B466A;
+  height: 500px;
+  /* width: 300px; */
+  margin: 50px;
+  flex: 1 0 300px;
+  width: 100%;
+  border: 4px solid #290840;
+  
 }
 
 .feedback-box:hover {
-    transform: scale(1.1);
-    border:5px solid #0DD99F;
+  transform: scale(1.1);
+  border:5px solid #0DD99F;
 }
 
-  
-  @keyframes flash-green {
-    0% {
-      border-color: #290840;
-    }
-    50% {
-      border-color:#0DD99F;
-    }
-    100% {
-      border-color: #290840;
-    }
-  }
-  
 
   .feedback-title {
     text-align: center;
@@ -62,42 +49,79 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: .15em solid #0DD99F;
-    animation: typing 5s steps(20, end), blink-caret .5s step-end infinite;
+    animation: typing 5s steps(50, end), blink-caret .2s step-end infinite;
     animation-iteration-count: infinite; 
   }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #0DD99F }
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #0DD99F;
+    }
   }
-  
-  
+
+.feedback-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 50px;
+  padding-bottom: 20px;
+  color: #0DD99F;
+  padding-top: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #0DD99F;
+  animation: typing 5s steps(20, end), blink-caret .5s step-end infinite;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0DD99F }
+}
+
+
 
 
 @media (max-width: 768px) {
-    .feedback {
-        flex-direction: column;
-        align-items: center;
-    }
+  .feedback {
+      flex-direction: column;
+      align-items: center;
+  }
 
-    .feedback-box {
-        flex: 1 0 80%;
-        margin: 20px;
-        height: auto;
-    }
+  .feedback-box {
+      flex: 1 0 80%;
+      margin: 20px;
+      height: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback-box {
+    flex: 1 0 80%;
+    margin: 5vw;
+    height: auto;
+  }
 }
 
 @media (max-width: 576px) {
-    .feedback-title {
-        font-size: 30px;
-    }
+  .feedback-title {
+    font-size: 8vw;
+  }
 
-    .review {
-        font-size: 18px;
-    }
+  .review {
+    font-size: 4vw;
+  }
 }
