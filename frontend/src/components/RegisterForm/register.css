@@ -121,6 +121,7 @@
   margin: 1vh 0 3vh 0;
   color: #36184B;
   border: 2px solid #553D65;
+  padding-left: 2vh;
 }
 
 .login-container1>input:hover {

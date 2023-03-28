@@ -91,6 +91,7 @@
     border: 2px solid #36184B;
     border-color:#553D65;
     color:#36184B;
+    padding-left: 2vh;
 }
 .login-container > input:hover {
   
