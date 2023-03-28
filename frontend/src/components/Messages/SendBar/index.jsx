@@ -6,13 +6,14 @@ const SendBar = ({ update }) => {
 	const [message, setMessage] = useState("");
 
 	const user_id = localStorage.getItem("user_id");
+	const recepient_id = localStorage.getItem("recepient_id");
 	const handleSendBtn = () => {
 		axios({
 			method: "post",
 			url: "http://localhost:8000/api/sendmsgs",
 			data: {
 				sender_id: user_id,
-				recepient_id: 1,
+				recepient_id: recepient_id,
 				message,
 			},
 			headers: {
